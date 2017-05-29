@@ -1,0 +1,53 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'nav.scss';
+
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Futura, Helvetica, sans-serif;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  border-bottom: 3px solid $blue;
+}
+.digital {
+  color: $red;
+}
+.physical {
+  color: $blue;
+}
+
+.container {
+    position: absolute;
+    top: 2 * $containerPadding + 22.4px;
+    left: 2 * $containerPadding + 22.4px;
+    right: 2 * $containerPadding + 22.4px;
+    bottom: 0;
+    box-sizing: border-box;
+
+    .when-box {
+      margin-top: 220px;
+      border-right: $borderWidth solid $blk;
+      height: 100%;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 200px;
+        border-top: $borderWidth solid $blk;
+        @include rotate(10deg, right bottom);
+      }
+    }
+  }
+
+.about {
+  font-size: 1.8em;
+  max-width: 30em;
+  margin: $containerPadding auto;
+}

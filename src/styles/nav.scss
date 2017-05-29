@@ -1,0 +1,69 @@
+@import 'variables.scss';
+
+.nav-container {
+  position: fixed;
+  top: $containerPadding;
+  left: $containerPadding;
+  right: $containerPadding;
+  bottom: $containerPadding;
+  z-index: 100;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 99;
+    top: -$containerPadding;
+    left: -$containerPadding;
+    right: -$containerPadding;
+    bottom: -$containerPadding;
+    border: $containerPadding solid white;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: $borderWidth solid $blk;
+  }
+
+  .nav-blinder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: ($containerPadding * 2) + 22.4px;
+    background-color: white;
+  }
+
+  .nav {
+    font-size: 1.4em;
+
+    > div {
+      position: absolute;
+    }
+
+    &__top {
+      top: $containerPadding;
+      left: $containerPadding + 22.4px;
+    }
+
+    &__right {
+      top: $containerPadding;
+      right: $containerPadding;
+        @include rotate(-90deg, right bottom);
+      &__rotate {
+      @include rotate(180deg, center);
+      }
+    }
+
+    &__left {
+      bottom: $containerPadding;
+      left: $containerPadding;
+      @include rotate(-90deg, left top);
+    }
+  }
+}
