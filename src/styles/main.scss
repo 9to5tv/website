@@ -97,6 +97,20 @@ a {
     display: block;
   }
 }
+.fixed-bottom {
+  position: fixed;
+  z-index: 100;
+  bottom: -$containerPadding;
+  left: $containerPadding;
+  right: $containerPadding;
+}
+#waveform {
+  width: 100%;
+  height: $containerPadding * 4;
+  stroke: black;
+  stroke-width: $borderWidth;
+  fill: none;
+}
 .slant-container {
   position: relative;
   z-index: 99;

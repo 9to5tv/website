@@ -1,4 +1,5 @@
 import $ from 'jquery';
+require('./waveform');
 
 $(document).ready(() => {
   const $body = $('body');
