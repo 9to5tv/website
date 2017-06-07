@@ -107,9 +107,18 @@ a {
 #waveform {
   width: 100%;
   height: $containerPadding * 4;
-  stroke: black;
-  stroke-width: $borderWidth;
-  fill: none;
+
+  polyline {
+    stroke: black;
+    stroke-width: $borderWidth;
+    fill: none;
+  }
+
+  polygon {
+    fill: white;
+    stroke: none;
+  }
+
 }
 .slant-container {
   position: relative;
