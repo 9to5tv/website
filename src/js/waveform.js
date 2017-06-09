@@ -18,7 +18,6 @@ function move(amplitude, frequency, length, i, polygonal){
   if (polygonal) {
     points.push([length,amplitude*2 + yBase].join(' '))
     points.push([0,amplitude*2 + yBase].join(' '));
-    console.log(points);
   }
   return points;
 }
@@ -30,7 +29,7 @@ var width = $svg.width();
 var height = $svg.height()/4;
 function draw(){
   var c = ++counter/20;
-  const frequency = ($('body').scrollTop() / $(document).height());
+  const frequency = Math.pow(($('body').scrollTop() / $(document).height()) / 2, 2);
   $polyline.attr('points', move(height, frequency, width, c, false));
   $polygon.attr('points', move(height, frequency, width, c, true));
   requestAnimationFrame(draw);
