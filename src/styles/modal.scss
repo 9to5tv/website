@@ -1,0 +1,72 @@
+.blanket {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(white,0.8);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 200;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.visible {
+    pointer-events: initial;
+    opacity: 1;
+
+    .apply-modal {
+      top: 0;
+    }
+  }
+}
+
+.apply-modal {
+  position: relative;
+  top: 100%;
+  transition: top 0.5s;
+  max-width: 600px;
+  margin: $containerPadding auto;
+  padding: $containerPadding $containerPadding * 3;
+  border: $borderWidth solid $blk;
+  text-align: center;
+  background-color: rgba(white,0.9);
+
+  .close-modal {
+    position: absolute;
+    top: $containerPadding;
+    right: $containerPadding;
+
+    &:before {
+      content: '[ ';
+    }
+
+    &:after {
+      content: ' ]';
+    }
+  }
+
+  h3 {
+  }
+
+  .form-section {
+    margin-bottom: 16px;
+
+    input {
+      font-size: 16px;
+      border: 4px solid $blk;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 8px;
+      outline: none;
+
+      &:focus {
+        border-color: $blue;
+      }
+    }
+  }
+
+}

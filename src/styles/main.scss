@@ -1,6 +1,8 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 @import 'nav.scss';
+@import 'modal.scss';
+@import 'applications.scss';
 
 html,body {
   margin: 0;
@@ -12,7 +14,6 @@ html,body {
 a {
   color: $blue;
   text-decoration: none;
-  border-bottom: 3px solid $blue;
 
   &.digital {
     color: $red;
@@ -21,6 +22,14 @@ a {
 
   &:active {
     color: $red;
+  }
+
+  &:before {
+    content: '/\00a0';
+  }
+
+  &:after {
+    content: '\00a0/';
   }
 }
 .digital {
@@ -45,17 +54,19 @@ a {
   box-sizing: border-box;
 
   .inner-container {
+    // border-left: $borderWidth solid $blk;
     border-right: $borderWidth solid $blk;
     min-height: 100%;
     margin-top: 300px;
+    box-sizing: border-box;
 
     .apply-container {
       clear: both;
       border-top: $borderWidth solid $blk;
       border-left: $borderWidth solid $blk;
-      min-height: 100%;
       width: 100%;
-      padding-bottom: 100%;
+      padding: $containerPadding * 4 0;
+      box-sizing: border-box;
 
       h2 {
         text-align: center;
@@ -64,6 +75,12 @@ a {
     }
   }
 
+}
+
+p {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about {
@@ -137,13 +154,10 @@ a {
 }
 
 .when-box {
-  float: right;
-  padding: 2em 4em 2em 2em;
-  border: $borderWidth solid $blk;
-  border-right: none;
-  border-bottom: none;
+  // padding: 2em 4em 2em 2em;
   font-size: 1.8em;
-  margin: $sectionMargin 0;
+  margin: $sectionMargin auto;
+  max-width: 42rem;
 
 
   .where-details {
