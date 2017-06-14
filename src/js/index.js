@@ -13,7 +13,11 @@ $(document).ready(() => {
     else $fixedTopBorder.removeClass('visible');
   });
 
-  $('.apply').click(e => {
+  let applicationType;
+
+  $('.apply').click(function(e) {
+    applicationType = $(this).data('type');
+
     $('.blanket').addClass('visible');
     e.preventDefault();
     return false;
@@ -21,6 +25,19 @@ $(document).ready(() => {
 
   $('.close-modal').click(e => {
     $('.blanket').removeClass('visible');
+    e.preventDefault();
+    return false;
+  });
+
+  $('.submit-form').click(e => {
+    var form = $('form.open-call').serializeArray();
+    var data = {};
+    for (let field of form) { data[field.name] = field.value; }
+    data.type = applicationType;
+    data.timestamp = (new Date()).toString();
+    console.log(data);
+    $.get('https://script.google.com/macros/s/AKfycbxttV8TnjMZJMltoJede1lqE3PDJpqTX5ONQTiytB7cpOR8P4c/exec', data);
+
     e.preventDefault();
     return false;
   });

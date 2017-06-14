@@ -62,8 +62,8 @@ a {
 
     .apply-container {
       clear: both;
-      border-top: $borderWidth solid $blk;
       border-left: $borderWidth solid $blk;
+      margin-top: -100px;
       width: 100%;
       padding: $containerPadding * 4 0;
       box-sizing: border-box;
@@ -92,7 +92,7 @@ p {
 .more {
   font-size: 1.3em;
   max-width: 42rem;
-  margin: -100px auto $containerPadding;
+  margin: $containerPadding auto;
 }
 
 .who {
