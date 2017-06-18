@@ -6,14 +6,22 @@ $(document).ready(() => {
   const $innerContainer = $('#inner-container');
   const $fixedTopBorder = $('.fixed-inner-top');
 
-  $(window).scroll(function (e) {
-    const scrollTop = $body.scrollTop();
-    const offsetAmt = $innerContainer.offset().top - 200 - 70.4 + 8;
-    if (scrollTop > offsetAmt) $fixedTopBorder.addClass('visible');
-    else $fixedTopBorder.removeClass('visible');
-  });
+  // $(window).scroll(function (e) {
+  //   const scrollTop = $body.scrollTop();
+  //   const offsetAmt = $innerContainer.offset().top - 200 - 70.4 + 8;
+  //   if (scrollTop > offsetAmt) $fixedTopBorder.addClass('visible');
+  //   else $fixedTopBorder.removeClass('visible');
+  // });
 
   let applicationType;
+
+  $('a.scroll').click(function(e) {
+    console.log($(this));
+    console.log($($(this).attr('href')));
+    $body.stop().animate({ scrollTop: $($(this).attr('href')).offset().top - 32 }, 500, 'swing');
+    e.preventDefault();
+    return false;
+  });
 
   $('.apply').click(function(e) {
     applicationType = $(this).data('type');

@@ -3,12 +3,17 @@
 @import 'nav.scss';
 @import 'modal.scss';
 @import 'applications.scss';
+@import 'above-fold.scss';
+@import 'introduction.scss';
+@import 'opencall.scss';
 
 html,body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: Futura, Helvetica, sans-serif;
+  font-family: $font;
+  font-weight: 500;
+  letter-spacing: 0.048em;
 }
 
 a {
@@ -31,6 +36,12 @@ a {
   &:after {
     content: '\00a0/';
   }
+
+  &.no-slash {
+    &:before, &:after {
+      content: none;
+    }
+  }
 }
 .digital {
   color: $red;
@@ -44,6 +55,12 @@ a {
   padding: $borderWidth $containerPadding;
   vertical-align: text-bottom;
 }
+.n9to5 {
+  font-size: 1.25em;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 500;
+}
 
 .container {
   position: absolute;
@@ -52,6 +69,23 @@ a {
   right: 3 * $containerPadding + 22.4px;
   bottom: 0;
   box-sizing: border-box;
+
+  &__page {
+    border: $borderWidth solid $blk;
+    border-bottom: none;
+    box-sizing: border-box;
+    margin: 0 $containerPadding;
+    padding: $containerPadding;
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    &__contents {
+      max-width: $maxWidth;
+      margin: 0 auto;
+    }
+  }
 
   .inner-container {
     // border-left: $borderWidth solid $blk;

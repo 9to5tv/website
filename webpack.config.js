@@ -10,6 +10,7 @@ module.exports = {
   // devtool: '#inline-source-map',
   entry: [
     './src/js/index.js',
+    './src/index.html',
     './src/styles/main.scss'
   ],
   output: {
@@ -25,6 +26,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader?presets[]=es2015&retainLines=true'
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader', 'extract-loader', 'html-loader?interpolate']
       },
       {
         test: /\.scss$/,

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>9to5</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+<body ontouchstart="">
+  <div class="nav-container">
+    <div class="nav-blinder"></div>
+    <div class="nav">
+      <div class="nav__top">9to5 : Works in Progress</div>
+      <div class="nav__right"><div class="nav__right__rotate">Sep 8 &ndash; Oct 6 2017</div></div>
+      <div class="nav__left" id='nav__apply'><span style="left:32px;">APPLY</span></div>
+    </div>
+  </div>
+
+  <div class="container">
+    ${require('!raw-loader!./partials/introduction.html')}
+    <div class="about">
+      <p><span class="title">9to5 : Works in Progress</span> is a month long exhibition showcasing projects in Atlanta that are influenced by the online community through <a href="#">collaborative tools</a>. Participants will work at the <a href="#" class="physical">CUBE</a> and debut their projects via our live stream.</p>
+
+      <p>Artists, creators, directors, and anyone that wants to explore new ways of using live streaming as a way to collaborate with the world should apply to our Open Call!</p>
+    </div>
+
+    <div class="inner-container" id="inner-container">
+      <div class="fixed-inner-top"></div>
+      <div class="fixed-bottom">
+        <svg id="waveform">
+          <polygon></polygon>
+          <polyline></polyline>
+        </svg>
+      </div>
+      <div class="slant-container">
+        <svg class="slant" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10"
+          height="100%" width="100%" preserveAspectRatio="none">
+          <polygon points="0 0 0 2 100 10 100 0" />
+          <polygon class="border" points="0 2 0 2.4 100 10 100 9.6" shape-rendering="geometricPrecision" />
+        </svg>
+        
+      </div>
+
+      <div class="apply-container">
+        <h2>Apply to Open Call</h2>
+        <p>9to5 will feature artists and creators that use live streaming with participation from the online audience to create a collaborative outcome. We are looking for projects that want to explore new ways of using live streaming as a way to connect and collaborate with the world. From data-vis to vr, from workshops to idle games, from storytelling to interactive music, from dance to hackathons.</p>
+
+        <div class="applications">
+          <div class="applications__pair">
+            <div class="applications__box">
+              <h3>INSIDE<br />/PROJECT</h3>
+              <p>A one time or recurring project throughout the month. Live streaming vr or 360 video, a music or dance performance, a storytelling project, a panel or workshop.</p>
+              <a class="applications__box__link digital apply" data-type="inside-project" href="#">apply</a>
+            </div>
+
+            <div class="applications__box">
+              <h3>OUTSIDE<br />/PROJECT</h3>
+              <p>If the project doesn’t require to be in our space to function we can still stream your project to our audience</p>
+              <a class="applications__box__link digital apply" data-type="outside-project" href="#">apply</a>
+            </div>
+          </div>
+
+          <div class="applications__pair">
+
+            <div class="applications__box">
+              <h3>INSIDE<br />/GALLERY</h3>
+              <p>We&rsquo;ll have a physical gallery at 9to5 to display works in the space.</p>
+              <a class="applications__box__link digital apply" data-type="inside-gallery" href="#">apply</a>
+            </div>
+            <div class="applications__box">
+              <h3>OUTSIDE<br />/GALLERY</h3>
+              <p>We can host your idle web-based projects on our online gallery.</p>
+              <a class="applications__box__link digital apply" data-type="outside-gallery" href="#">apply</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="more" id="more">
+          <p>9to5 is equal parts: Artist Residency, Gallery, Classroom, & Television Network</p>
+     
+          <p>We&rsquo;ll stream artists creating their works, site specific multi media projects, social activism panels, new media workshops, panel shows, podcasts, visual shows, and more. All of these segments will be divided into channels and programming blocks throughout our month long exhibition.</p>
+     
+          <p>We&rsquo;ll host idle web based projects on our website gallery and display real life site specific projects installations in our INSIDE Gallery, all connected to the web ready for participation from the world.</p>
+        </div>
+
+        <div class="when-box">
+          <div>September 8th &ndash; October 6th 2017</div>
+          <div class="where-details"><a href="//9to5.tv" class="digital">9to5.tv</a> // <span class="physical">GSU&rsquo;s CUBE</span> // <span class="physical">Atlanta, GA</span></div>
+        </div>
+
+        <div class="who">
+          <h3>Sponsors</h3>
+          <p>GSU / The Goat Farm / Hambidge / Mailchimp / Waffle House</p>
+
+          <h3>Local Partners</h3>
+          <p>Downtown Players Club / WUSSY MAG / MASS Collective / Mammal Gallery</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="blanket">
+    <div class="apply-modal">
+      <h3>OPEN CALL</h3>
+
+      <a href="#" class="close-modal physical">close</a>
+
+      <form class="open-call">
+        <div class="form-section">
+          <div class="label">Name</div>
+          <input type="text" name="name">
+        </div>
+        <div class="form-section">
+          <div class="label">Email</div>
+          <input type="email" name="email">
+        </div>
+        <div class="form-section"v>
+          <div class="label">City</div>
+          <input type="text" name="location">
+        </div>
+        <div class="form-section">
+          <div class="label">Project Title</div>
+          <input type="text" name="title">
+        </div>
+        <div class="form-section">
+          <div class="label">Project Description</div>
+          <input type="text" name="description">
+        </div>
+        <div class="form-section">
+          <div class="label">Technical Description</div>
+          <input type="text" name="technical">
+        </div>
+        <div class="form-section">
+          <div class="label">Interactive Description</div>
+          <input type="text" name="interactive">
+        </div>
+        <div class="form-section">
+          <div class="label">Describe your past works</div>
+          <input type="text" name="past">
+        </div>
+      </form>
+
+      <a href="#" class="submit-form">submit</a>
+      
+    </div>
+  </div>
+</body>
+</html>
