@@ -6,6 +6,8 @@
 @import 'above-fold.scss';
 @import 'introduction.scss';
 @import 'opencall.scss';
+@import 'partners.scss';
+@import 'team.scss';
 
 html,body {
   margin: 0;
@@ -23,6 +25,9 @@ a {
   &.digital {
     color: $red;
     border-color: $red;
+  }
+  &.black {
+    color: $blk;
   }
 
   &:active {
@@ -64,21 +69,93 @@ a {
 
 .container {
   position: absolute;
-  top: 3 * $containerPadding + 22.4px;
-  left: 3 * $containerPadding + 22.4px;
-  right: 3 * $containerPadding + 22.4px;
+  top: 3 * $containerPadding + 16px;
+  left: 3 * $containerPadding + 16px;
+  right: 3 * $containerPadding + 16px;
   bottom: 0;
   box-sizing: border-box;
 
   &__page {
+    position: relative;
     border: $borderWidth solid $blk;
+    border-top: none;
     border-bottom: none;
     box-sizing: border-box;
-    margin: 0 $containerPadding;
-    padding: $containerPadding;
+    margin: 0;
+    padding: $containerPadding * 2 + 60px $containerPadding;
+
+    &.last {
+      padding-bottom: 16 * $containerPadding;
+    }
+
+    &.fixed {
+      h2 {
+        background: white;
+        position: fixed;
+        left: 3 * $containerPadding + 16px + $borderWidth;
+        right: 3 * $containerPadding + 16px + $borderWidth;
+        z-index: 100;
+      }
+
+      $h2Height: 61px;
+      &:nth-child(2) {
+        h2 {
+          top: 3 * $containerPadding + 16px + $borderWidth - 2px;
+        }
+      }
+
+      &:nth-child(3) {
+        h2 {
+          top: 3 * $containerPadding + 16px + $borderWidth - 2px + ($h2Height);
+        }
+      }
+
+      &:nth-child(4) {
+        h2 {
+          top: 3 * $containerPadding + 16px + $borderWidth - 2px + ($h2Height * 2);
+        }
+      }
+
+      &:nth-child(5) {
+        h2 {
+          top: 3 * $containerPadding + 16px + $borderWidth - 2px + ($h2Height * 3);
+        }
+      }
+
+      &:nth-child(6) {
+        h2 {
+          top: 3 * $containerPadding + 16px + $borderWidth - 2px + ($h2Height * 4);
+        }
+      }
+
+      &:nth-child(7) {
+        h2 {
+          top: 3 * $containerPadding + 16px + $borderWidth - 2px + ($h2Height * 5);
+        }
+      }
+    }
 
     h2 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0;
       font-size: 1rem;
+      border-top: $borderWidth solid $blk;
+      box-sizing: border-box;
+
+      a {
+        display: block;
+        width: 100%;
+        padding: $containerPadding;
+        color: $blk;
+      }
+    }
+
+    &__subheading {
+      font-size: 1.25rem;
+      margin: 4em 0;
     }
 
     &__contents {
@@ -187,22 +264,62 @@ p {
   fill: $blk;
 }
 
-.when-box {
-  // padding: 2em 4em 2em 2em;
-  font-size: 1.8em;
-  margin: $sectionMargin auto;
-  max-width: 42rem;
+.gallery-boxes {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
 
+  &__pair {
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
 
-  .where-details {
-    color: $gray;
+  &__box {
+    border: $borderWidth solid $blk;
+    flex-basis: 20rem;
+    flex-shrink: 1;
+    min-height: 16.6rem;
+    margin: $containerPadding * 2;
+    padding: $containerPadding * 2;
+    padding-bottom: $containerPadding * 2 + 20px;
+    position: relative;
 
-    > span, > a {
-      margin: 0 8px;
+    h3 {
+      font-weight: 500;
+      font-size: 2.1rem;
+      margin: 0 0 $containerPadding;
+    }
 
-      &:first-child {
-        margin-left: 0;
-      }
+    p {
+      text-align: left;
+      font-family: 'merriweather', serif;
+      font-weight: 300;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    &__award {
+      font-family: 'merriweather', serif;
+      position: absolute;
+      left: $containerPadding * 2;
+      bottom: $containerPadding;
+      line-height: 20px;
+      font-size: 0.7rem;
+    }
+
+    &__link {
+      position: absolute;
+      right: $containerPadding * 2;
+      bottom: $containerPadding;
+      line-height: 20px;
     }
   }
 }
+

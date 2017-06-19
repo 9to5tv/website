@@ -5,20 +5,31 @@ $(document).ready(() => {
   const $body = $('body');
   const $innerContainer = $('#inner-container');
   const $fixedTopBorder = $('.fixed-inner-top');
+  const $pages = $('.container__page');
+  const pageScrollOffset = 68;
 
-  // $(window).scroll(function (e) {
-  //   const scrollTop = $body.scrollTop();
-  //   const offsetAmt = $innerContainer.offset().top - 200 - 70.4 + 8;
-  //   if (scrollTop > offsetAmt) $fixedTopBorder.addClass('visible');
-  //   else $fixedTopBorder.removeClass('visible');
-  // });
+  $(window).scroll(function (e) {
+    const scrollTop = $body.scrollTop();
+    // const offsetAmt = $innerContainer.offset().top - 200 - 70.4 + 8;
+    // if (scrollTop > offsetAmt) $fixedTopBorder.addClass('visible');
+    for (let i = 0; i < $pages.length; i++) {
+      const $page = $($pages[i]);
+      if (scrollTop > $page.offset().top - pageScrollOffset - (61*i)) {
+        $page.addClass('fixed');
+      } else {
+        $page.removeClass('fixed');
+      }
+    }
+
+    // else $fixedTopBorder.removeClass('visible');
+  });
 
   let applicationType;
 
   $('a.scroll').click(function(e) {
-    console.log($(this));
-    console.log($($(this).attr('href')));
-    $body.stop().animate({ scrollTop: $($(this).attr('href')).offset().top - 32 }, 500, 'swing');
+    const $targetPage = $($(this).attr('href'));
+    const pageIndex = $pages.index($targetPage);
+    $body.stop().animate({ scrollTop: $targetPage.offset().top - 32 - (61 * (pageIndex > -1 ? pageIndex : 0)) }, 500, 'swing');
     e.preventDefault();
     return false;
   });

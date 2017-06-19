@@ -38,7 +38,32 @@ module.exports = {
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
-      }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              progressive: true,
+              gifsicle: {
+                interlaced: false,
+                colors: 256,
+                optimizationLevel: 3,
+              },
+              optipng: {
+                interlaced: false,
+                optimizationLevel: 7,
+              },
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              }
+            }
+          }
+        ]
+      },
     ]
   },
   plugins: [
