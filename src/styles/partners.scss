@@ -25,17 +25,22 @@
       justify-content: space-between;
       letter-spacing: 0.075em;
       align-items: flex-end;
+      font-size: 1.2rem;
 
-      .sm {
-        font-size: 2.1rem;
-      }
-
-      .md {
+      @include respond-to('medium') {
         font-size: 2.8rem;
       }
 
+      .sm {
+        font-size: 0.75em;
+      }
+
+      .md {
+        font-size: 1em;
+      }
+
       .lg {
-        font-size: 4.2rem;
+        font-size: 1.5em;
       }
     }
   }

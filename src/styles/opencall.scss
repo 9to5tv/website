@@ -10,17 +10,23 @@
     &__row {
       display: flex;
       justify-content: space-between;
+      font-size: 1.2rem;
+
+      @include respond-to('medium') {
+        font-size: 2.8rem;
+      }
+      
 
       .sm {
-        font-size: 2.1rem;
+        font-size: 0.75em;
       }
 
       .md {
-        font-size: 2.8rem;
+        font-size: 1em;
       }
 
       .lg {
-        font-size: 4.2rem;
+        font-size: 1.5em;
       }
     }
   }

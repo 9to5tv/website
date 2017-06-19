@@ -282,14 +282,23 @@ p {
   }
 
   &__box {
-    border: $borderWidth solid $blk;
-    flex-basis: 20rem;
+    border-top: $borderWidth solid $blk;
+    border-bottom: $borderWidth solid $blk;
+    flex-basis: 100%;
     flex-shrink: 1;
     min-height: 16.6rem;
-    margin: $containerPadding * 2;
-    padding: $containerPadding * 2;
-    padding-bottom: $containerPadding * 2 + 20px;
+    margin: $containerPadding auto;
+    padding: $containerPadding;
+    padding-bottom: $containerPadding * 2 + 48px;
     position: relative;
+
+    @include respond-to('medium') {
+      flex-basis: 20rem;
+      border: $borderWidth solid $blk;
+      margin: $containerPadding * 2;
+      padding: $containerPadding * 2;
+      padding-bottom: $containerPadding * 2 + 20px;
+    }
 
     h3 {
       font-weight: 500;
@@ -308,17 +317,27 @@ p {
     &__award {
       font-family: 'merriweather', serif;
       position: absolute;
-      left: $containerPadding * 2;
-      bottom: $containerPadding;
+      right: $containerPadding;
+      bottom: $containerPadding + 28px;
       line-height: 20px;
       font-size: 0.7rem;
+
+      @include respond-to('medium') {
+        left: $containerPadding * 2;
+        bottom: $containerPadding;
+        right: initial;
+      }
     }
 
     &__link {
       position: absolute;
-      right: $containerPadding * 2;
+      right: $containerPadding;
       bottom: $containerPadding;
       line-height: 20px;
+
+      @include respond-to('medium') {
+        right: $containerPadding * 2;
+      }
     }
   }
 }

@@ -9,8 +9,12 @@
   }
 
   &__date {
-    font-size: 2.8rem;
+    font-size: 1.2rem;
     margin: 2em 0;
+
+    @include respond-to('medium') {
+      font-size: 2.8rem;
+    }
 
     &__row {
       display: flex;
@@ -39,7 +43,7 @@
         padding: 0 0.5em;
 
         > span {
-          font-size: 2.1rem;
+          font-size: 0.75em;
         }
       }
     }

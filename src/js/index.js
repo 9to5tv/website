@@ -56,7 +56,7 @@ $(document).ready(() => {
     data.timestamp = (new Date()).toString();
     console.log(data);
     $.get('https://script.google.com/macros/s/AKfycbxttV8TnjMZJMltoJede1lqE3PDJpqTX5ONQTiytB7cpOR8P4c/exec', data);
-
+    $('.blanket').removeClass('visible');
     e.preventDefault();
     return false;
   });
