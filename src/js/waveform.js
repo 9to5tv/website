@@ -41,7 +41,8 @@ class Waveform {
 
   draw() {
     const c = ++this.counter/20;
-    const frequency = Math.pow(($('body').scrollTop() / $(document).height()) / 2, 2);
+    const scrollTop = $('body,html').scrollTop() || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const frequency = Math.pow((scrollTop / $(document).height()) / 2, 2);
     this.$polyline.attr('points', move(this.height, frequency, this.width, c, false));
     this.$polygon.attr('points', move(this.height, frequency, this.width, c, true));
     requestAnimationFrame(this.draw);

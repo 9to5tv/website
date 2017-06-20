@@ -3,7 +3,7 @@ import Waveform from './waveform';
 window.$ = $;
 
 $(document).ready(() => {
-  const $body = $('body');
+  const $body = $('body,html');
   const $innerContainer = $('#inner-container');
   const $fixedTopBorder = $('.fixed-inner-top');
   const $pages = $('.container__page');
@@ -14,7 +14,7 @@ $(document).ready(() => {
 
 
   const updatePageStack = () => {
-    const scrollTop = $body.scrollTop();
+    const scrollTop = $body.scrollTop() || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     // const offsetAmt = $innerContainer.offset().top - 200 - 70.4 + 8;
     // if (scrollTop > offsetAmt) $fixedTopBorder.addClass('visible');
     for (let i = 0; i < $pages.length; i++) {
@@ -34,8 +34,11 @@ $(document).ready(() => {
   }
 
   const updateCTAPosition = () => {
-    const scrollTop = $body.scrollTop();
-    const scrollHeight = document.body.scrollHeight - document.documentElement.clientHeight;
+    const scrollTop = $body.scrollTop() || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollHeight = (document.body.scrollHeight || document.documentElement.scrollHeight) - document.documentElement.clientHeight;
+    console.log(scrollTop);
+    console.log(scrollHeight);
+    console.log(leftCTABound);
     $leftCTA.css('left', leftCTABound * (scrollTop / scrollHeight));
     $rightCTA.css('left', rightCTABound * (scrollTop / scrollHeight));
   }
@@ -44,6 +47,7 @@ $(document).ready(() => {
   updatePageStack();
   updateCTAScrolls();
   updateCTAPosition();
+
   $(window).scroll(function(e) {
     updatePageStack();
     updateCTAPosition();
