@@ -49,6 +49,29 @@
       position: absolute;
     }
 
+    .fixed {
+      position: absolute;
+      width: 500px;
+      pointer-events: none;
+    }
+
+    a {
+      position: relative;
+      background-color: white;
+      z-index: 100;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -48px;
+        right: -48px;
+        background-color: white;
+        z-index: -1;
+      }
+    }
+
     &__top {
       top: $containerPadding;
       left: $containerPadding + 22.4px;
