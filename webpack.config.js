@@ -74,6 +74,38 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({ template: './src/index.html' }),
     new ExtractTextPlugin('styles.css'),
+    new FaviconsWebpackPlugin({
+      logo: './src/img/favicon.png',
+      prefix: 'icons/',
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: true,
+        twitter: true,
+        yandex: false,
+        windows: true
+      }
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/img/favicon.png',
+      prefix: '/',
+      icons: {
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: false,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    }),
     // new StyleExtHtmlWebpackPlugin(),
     new webpack.optimize.UglifyJsPlugin({ output: { ascii_only: true } })
   ],

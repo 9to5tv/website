@@ -12,21 +12,23 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
 
   &.visible {
     pointer-events: initial;
     opacity: 1;
 
-    .apply-modal {
+    .modal {
       top: 0;
     }
   }
 }
 
-.apply-modal {
+.modal {
   position: relative;
   top: 100%;
   transition: top 0.5s;
+  -webkit-transition: top 0.5s;
   max-width: 600px;
   margin: $containerPadding auto;
   padding: $containerPadding $containerPadding * 3;
@@ -47,25 +49,60 @@
       content: ' ]';
     }
   }
+}
 
-  h3 {
-  }
+.apply-modal {
 
   .form-section {
     margin-bottom: 16px;
+    display: inline-block;
+
+    @include respond-to('medium') {
+      margin: 16px;
+    }
 
     input {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    textarea {
+      height: 150px;
+      padding: 8px;
+      resize: vertical;
+    }
+
+    input, textarea {
+      font-family: $font;
+      font-weight: 500;
       font-size: 16px;
       border: 4px solid $blk;
       display: inline-block;
-      height: 30px;
-      line-height: 30px;
       padding: 0 8px;
       outline: none;
+      width: 15em;
+      max-width: 90%;
+
 
       &:focus {
         border-color: $blue;
       }
+    }
+
+    &.invalid {
+      input, textarea {
+        border-color: $red;
+      }
+    }
+  }
+
+  .submitted {
+    h3 {
+      font-size: 2.4rem;
+    }
+
+    .close-modal {
+      position: initial;
     }
   }
 

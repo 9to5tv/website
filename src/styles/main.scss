@@ -17,6 +17,9 @@ html,body {
   font-weight: 500;
   letter-spacing: 0.048em;
 }
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
 
 a {
   color: $blue;
@@ -147,7 +150,6 @@ a {
 
       a {
         display: block;
-        width: 100%;
         padding: $containerPadding;
         color: $blk;
       }
@@ -324,7 +326,7 @@ p {
 
       @include respond-to('medium') {
         left: $containerPadding * 2;
-        bottom: $containerPadding;
+        bottom: $containerPadding * 2;
         right: initial;
       }
     }
@@ -337,6 +339,7 @@ p {
 
       @include respond-to('medium') {
         right: $containerPadding * 2;
+        bottom: $containerPadding * 2;
       }
     }
   }

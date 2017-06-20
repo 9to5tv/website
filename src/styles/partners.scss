@@ -11,10 +11,18 @@
       max-width: 45%;
       margin: 2rem 0;
 
+      &.big-sponsor {
+        max-width: 100%;
+      }
+
       img {
         max-width: 100%;
       }
     }
+  }
+
+  .blurb {
+    margin: 4rem 0;
   }
 
   &__cta {
@@ -43,5 +51,10 @@
         font-size: 1.5em;
       }
     }
+  }
+
+  &__benefits {
+    text-align: center;
+    font-style: italic;
   }
 }

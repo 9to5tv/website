@@ -1,45 +1,39 @@
-<div class="blanket">
-  <div class="apply-modal">
-    <h3>OPEN CALL</h3>
+<div class="blanket apply-blanket">
+  <div class="apply-modal modal">
+    <h3 class="modal__title apply-modal__title">OPEN CALL</h3>
 
     <a href="#" class="close-modal physical">close</a>
+    <div class="apply-modal__form-container">
+      <form class="open-call">
+        <div class="form-section">
+          <div class="label">Name</div>
+          <input class="form-section__input" type="text" name="name">
+        </div>
+        <div class="form-section">
+          <div class="label">Email</div>
+          <input class="form-section__input" type="email" name="email">
+        </div>
+        <div class="form-section">
+          <div class="label">Project Title</div>
+          <input class="form-section__input" type="text" name="title">
+        </div>
+        <div class="form-section">
+          <div class="label">Website</div>
+          <input class="form-section__input" type="url" name="website">
+        </div>
 
-    <form class="open-call">
-      <div class="form-section">
-        <div class="label">Name</div>
-        <input type="text" name="name">
-      </div>
-      <div class="form-section">
-        <div class="label">Email</div>
-        <input type="email" name="email">
-      </div>
-      <div class="form-section"v>
-        <div class="label">City</div>
-        <input type="text" name="location">
-      </div>
-      <div class="form-section">
-        <div class="label">Project Title</div>
-        <input type="text" name="title">
-      </div>
-      <div class="form-section">
-        <div class="label">Project Description</div>
-        <input type="text" name="description">
-      </div>
-      <div class="form-section">
-        <div class="label">Technical Description</div>
-        <input type="text" name="technical">
-      </div>
-      <div class="form-section">
-        <div class="label">Interactive Description</div>
-        <input type="text" name="interactive">
-      </div>
-      <div class="form-section">
-        <div class="label">Describe your past works</div>
-        <input type="text" name="past">
-      </div>
-    </form>
+        <div class="form-section">
+          <div class="label">Project Description</div>
+          <textarea class="form-section__input" name="description" placeholder="the what and the how of your project. 250 words or less"></textarea>
+        </div>
+        <div class="form-section">
+          <div class="label">Interactive Description</div>
+          <textarea class="form-section__input" type="text" name="interactive" placeholder="describe how the audience online will interact with your project. 250 words or less"></textarea>
+        </div>
+      </form>
 
-    <a href="#" class="submit-form">submit</a>
+      <a href="#" class="submit-form">submit</a>
+    </div>
     
   </div>
 </div>

@@ -1,5 +1,5 @@
 import $ from 'jquery';
-require('./waveform');
+import Waveform from './waveform';
 
 $(document).ready(() => {
   const $body = $('body');
@@ -8,7 +8,7 @@ $(document).ready(() => {
   const $pages = $('.container__page');
   const pageScrollOffset = 68;
 
-  $(window).scroll(function (e) {
+  const updatePageStack = () => {
     const scrollTop = $body.scrollTop();
     // const offsetAmt = $innerContainer.offset().top - 200 - 70.4 + 8;
     // if (scrollTop > offsetAmt) $fixedTopBorder.addClass('visible');
@@ -20,8 +20,17 @@ $(document).ready(() => {
         $page.removeClass('fixed');
       }
     }
+  };
 
-    // else $fixedTopBorder.removeClass('visible');
+  const wf = new Waveform();
+  updatePageStack();
+  $(window).scroll(function(e) {
+    updatePageStack();
+  });
+
+  $(window).resize(function(e) {
+    wf.reset();
+    updatePageStack();
   });
 
   let applicationType;
@@ -36,17 +45,41 @@ $(document).ready(() => {
 
   $('.apply').click(function(e) {
     applicationType = $(this).data('type');
+    $('.apply-modal__title').text(applicationType);
 
-    $('.blanket').addClass('visible');
+    $('.apply-blanket').addClass('visible');
     e.preventDefault();
     return false;
   });
 
-  $('.close-modal').click(e => {
+  $('.subscribe').click(function(e) {
+    $('.subscribe-blanket').addClass('visible');
+    e.preventDefault();
+    return false;
+  });
+
+  const closeModal = (e) => {
     $('.blanket').removeClass('visible');
     e.preventDefault();
     return false;
-  });
+  };
+  window.closeModal = closeModal;
+
+  $('.close-modal').click(closeModal);
+
+  const validate = () => {
+    let invalid = false;
+    $('form.open-call .form-section').each(function() {
+      console.log($(this).find('.form-section__input'));
+      if (!$(this).find('.form-section__input').val()) {
+        $(this).addClass('invalid');
+        invalid = true;
+      } else {
+        $(this).removeClass('invalid');
+      }
+    });
+    return !invalid;
+  };
 
   $('.submit-form').click(e => {
     var form = $('form.open-call').serializeArray();
@@ -54,9 +87,10 @@ $(document).ready(() => {
     for (let field of form) { data[field.name] = field.value; }
     data.type = applicationType;
     data.timestamp = (new Date()).toString();
-    console.log(data);
-    $.get('https://script.google.com/macros/s/AKfycbxttV8TnjMZJMltoJede1lqE3PDJpqTX5ONQTiytB7cpOR8P4c/exec', data);
-    $('.blanket').removeClass('visible');
+    if (validate()) {
+      $.get('https://script.google.com/macros/s/AKfycbxttV8TnjMZJMltoJede1lqE3PDJpqTX5ONQTiytB7cpOR8P4c/exec', data);
+      $('.apply-modal__form-container').html('<div class="submitted"><h3>THANK YOU!</h3><a href="#" onclick="closeModal()" class="close-modal physical">close</a></div>')
+    }
     e.preventDefault();
     return false;
   });

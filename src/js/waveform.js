@@ -21,18 +21,32 @@ function move(amplitude, frequency, length, i, polygonal){
   }
   return points;
 }
-var $svg = $('#waveform');
-var $polyline = $svg.find('polyline');
-var $polygon = $svg.find('polygon');
-var counter = 0;
-var width = $svg.width();
-var height = $svg.height()/4;
-function draw(){
-  var c = ++counter/20;
-  const frequency = Math.pow(($('body').scrollTop() / $(document).height()) / 2, 2);
-  $polyline.attr('points', move(height, frequency, width, c, false));
-  $polygon.attr('points', move(height, frequency, width, c, true));
-  requestAnimationFrame(draw);
+
+class Waveform {
+  constructor() {
+    this.$svg = $('#waveform');
+    this.$polyline = this.$svg.find('polyline');
+    this.$polygon = this.$svg.find('polygon');
+    this.reset = this.reset.bind(this);
+    this.draw = this.draw.bind(this);
+    this.reset();
+    this.draw();
+  }
+
+  reset() {
+    this.counter = 0;
+    this.width = this.$svg.width();
+    this.height = this.$svg.height()/4;
+  }
+
+  draw() {
+    const c = ++this.counter/20;
+    const frequency = Math.pow(($('body').scrollTop() / $(document).height()) / 2, 2);
+    this.$polyline.attr('points', move(this.height, frequency, this.width, c, false));
+    this.$polygon.attr('points', move(this.height, frequency, this.width, c, true));
+    requestAnimationFrame(this.draw);
+
+  }
 }
 
-draw();
+export default Waveform;
