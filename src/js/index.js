@@ -28,14 +28,9 @@ $(document).ready(() => {
   };
 
   const updateCTAScrolls = () => {
-    console.log($leftCTA);
     const distance = document.documentElement.clientHeight - 32 - 53 - 16;
     leftCTABound = distance - $leftCTA.width();
-    console.log($leftCTA.height());
-    console.log($leftCTA.width());
-    console.log(leftCTABound);
     rightCTABound = distance - $rightCTA.width();
-    console.log(rightCTABound);
   }
 
   const updateCTAPosition = () => {
@@ -101,7 +96,6 @@ $(document).ready(() => {
   const validate = () => {
     let invalid = false;
     $('form.open-call .form-section').each(function() {
-      console.log($(this).find('.form-section__input'));
       if (!$(this).find('.form-section__input').val()) {
         $(this).addClass('invalid');
         invalid = true;

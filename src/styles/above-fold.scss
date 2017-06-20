@@ -4,8 +4,12 @@
 
   &__header {
     font-size: 1.5rem;
-    text-align: justify;
+    text-align: center;
     letter-spacing: 0.048em;
+
+    @include respond-to('medium') {
+      text-align: justify;
+    }
   }
 
   &__date {

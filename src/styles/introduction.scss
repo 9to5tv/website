@@ -3,7 +3,11 @@
   p {
     font-size: 1em;
     line-height: 1.75em;
-    text-align: justify;
+    text-align: center;
+
+    @include respond-to('medium') {
+      text-align: justify;
+    }
   }
 
   .gallery-boxes {
