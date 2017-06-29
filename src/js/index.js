@@ -36,9 +36,6 @@ $(document).ready(() => {
   const updateCTAPosition = () => {
     const scrollTop = $body.scrollTop() || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     const scrollHeight = (document.body.scrollHeight || document.documentElement.scrollHeight) - document.documentElement.clientHeight;
-    console.log(scrollTop);
-    console.log(scrollHeight);
-    console.log(leftCTABound);
     $leftCTA.css('left', leftCTABound * (scrollTop / scrollHeight));
     $rightCTA.css('left', rightCTABound * (scrollTop / scrollHeight));
   }

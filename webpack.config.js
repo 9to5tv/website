@@ -8,13 +8,12 @@ const path = require('path');
 
 module.exports = {
   // devtool: '#inline-source-map',
-  entry: [
-    './src/js/index.js',
-    './src/index.html',
-    './src/styles/main.scss'
-  ],
+  entry: {
+    bundle: './src/js/index.js',
+    css: './src/styles/main.scss'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
@@ -72,7 +71,11 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      minify: {},
+      chunks: []
+    }),
     new ExtractTextPlugin('styles.css'),
     new FaviconsWebpackPlugin({
       logo: './src/img/favicon.png',
@@ -106,7 +109,7 @@ module.exports = {
         windows: false
       }
     }),
-    // new StyleExtHtmlWebpackPlugin(),
+    new StyleExtHtmlWebpackPlugin(),
     new webpack.optimize.UglifyJsPlugin({ output: { ascii_only: true } })
   ],
   devServer: {
