@@ -22,7 +22,7 @@ $(document).ready(() => {
   const startTime = new Date('Fri, 08 Sep 2017 13:00:00 GMT');
 
   const updateCountdown = () => {
-    const pad = num => (num < 10 ? '0' : '') + String(Math.round(num));
+    const pad = num => (num < 10 ? '0' : '') + String(Math.floor(num));
     // get total seconds between the times
     var delta = Math.abs(startTime - new Date()) / 1000;
 
