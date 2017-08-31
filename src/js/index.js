@@ -10,8 +10,40 @@ $(document).ready(() => {
   const pageScrollOffset = 68;
   const $leftCTA = $('.nav__left a');
   const $rightCTA = $('.nav__right a');
+  const $originalTitle = $('.camera-frame__title__original');
+  const $redTitle = $('.camera-frame__title__copy--red');
+  const $blueTitle = $('.camera-frame__title__copy--blue');
+  const $navFrame = $('.nav-piece');
+  const $aboveFold = $('.above-fold');
+  const $cameraFrame = $('.camera-frame');
+  const $countdown = $('.countdown-timer');
   let leftCTABound, rightCTABound;
+  let navFaded;
+  const startTime = new Date('Fri, 08 Sep 2017 13:00:00 GMT');
 
+  const updateCountdown = () => {
+    const pad = num => (num < 10 ? '0' : '') + String(Math.round(num));
+    // get total seconds between the times
+    var delta = Math.abs(startTime - new Date()) / 1000;
+
+    // calculate (and subtract) whole days
+    var days = Math.floor(delta / 86400);
+    delta -= days * 86400;
+
+    // calculate (and subtract) whole hours
+    var hours = Math.floor(delta / 3600) % 24;
+    delta -= hours * 3600;
+
+    // calculate (and subtract) whole minutes
+    var minutes = Math.floor(delta / 60) % 60;
+    delta -= minutes * 60;
+
+    // what's left is seconds
+    var seconds = delta % 60;  // in theory the modulus is not required
+    $countdown.text(`${pad(days)}:${pad(hours)}:${pad(minutes)}:${pad(seconds)}`);
+    setTimeout(updateCountdown, 1000);
+  }
+  updateCountdown();
 
   const updatePageStack = () => {
     const scrollTop = $body.scrollTop() || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -38,6 +70,24 @@ $(document).ready(() => {
     const scrollHeight = (document.body.scrollHeight || document.documentElement.scrollHeight) - document.documentElement.clientHeight;
     $leftCTA.css('left', leftCTABound * (scrollTop / scrollHeight));
     $rightCTA.css('left', rightCTABound * (scrollTop / scrollHeight));
+    const h = $(window).height();
+    if (scrollTop <= h) {
+      const amt = Math.pow(scrollTop / (h*0.75), 2);
+      $originalTitle.css('opacity', 1 - amt*2);
+      $redTitle.css('left', (-2 * amt) + 'em');
+      $blueTitle.css('right', (-2 * amt) + 'em');
+    }
+    if (scrollTop <= $aboveFold.height() - 0.2 * h) {
+      if (navFaded !== 'yes') {
+        $navFrame.stop().animate({ opacity: 0 });
+        navFaded = 'yes';
+      }
+    } else {
+      if (navFaded !== 'no') {
+        $navFrame.stop().animate({ opacity: 1 });
+        navFaded = 'no';
+      }
+    }
   }
 
   const wf = new Waveform();

@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -6,12 +7,13 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  devtool: '#inline-source-map',
-  entry: [
-    './src/js/index.js',
-    './src/styles/main.scss'
-  ],
+  // devtool: '#inline-source-map',
+  entry: {
+    bundle: './src/js/index.js',
+    css: './src/styles/main.scss'
+  },
   output: {
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
@@ -31,7 +33,10 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: ['style-loader', { loader: 'css-loader', options: { minimize: true } }, { loader: 'postcss-loader', options: { config: { path: './postcss.config.js' } } }, 'sass-loader']
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{ loader: 'css-loader', options: { minimize: true } }, { loader: 'postcss-loader', options: { config: { path: './postcss.config.js' } } }, 'sass-loader']
+        })
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -63,7 +68,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('development')
+        'NODE_ENV': JSON.stringify('production')
       }
     }),
     new HtmlWebpackPlugin({
@@ -71,6 +76,7 @@ module.exports = {
       minify: {},
       chunks: []
     }),
+    new ExtractTextPlugin('styles.css'),
     new FaviconsWebpackPlugin({
       logo: './src/img/favicon.png',
       prefix: 'icons/',
@@ -86,7 +92,25 @@ module.exports = {
         yandex: false,
         windows: true
       }
-    })
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/img/favicon.png',
+      prefix: '/',
+      icons: {
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: false,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    }),
+    new StyleExtHtmlWebpackPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ output: { ascii_only: true } })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

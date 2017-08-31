@@ -4,7 +4,7 @@
   <title>9to5 : Works in Progress</title>
   <meta name="description" content="9to5 is a month-long digital art exhibition in Atlanta that dissolves the boundary between artist and audience by way of an experimental livestream and other emerging interfaces.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="9to5.tv : Now Taking Applications" />
+  <meta property="og:title" content="9to5.tv : Sep 8 - Oct 6, 2017" />
   <meta property="og:url" content="http://9to5.tv/" />
   <meta property="og:description" content="9to5 is a month-long digital art exhibition in Atlanta that dissolves the boundary between artist and audience by way of an experimental livestream and other emerging interfaces." />
   <meta property="og:image" content="http://9to5-assets.s3-website.us-east-2.amazonaws.com/og.png" />
@@ -15,55 +15,36 @@
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body ontouchstart="">
-  <div class="nav-container">
-    <div class="nav-blinder"></div>
-    <div class="nav">
-      <div class="nav__top"><a href="#top" class="scroll black no-slash">9to5 : Works in Progress</a></div>
-      <div class="nav__right"><div class="nav__right__rotate">
-        <span class="fixed">Sep 8 - Oct 6 2017</span>
-        <a href="#" class="digital no-slash subscribe">STAY UP TO DATE</a>
-      </div></div>
-      <div class="nav__left" id='nav__apply'><a href="#open-call" class="scroll no-slash">APPLY TO OPEN CALL</a></div>
-    </div>
-  </div>
 
-  <div class="container" id="top">
-    <div class="above-fold">
-      <div class="above-fold__header">
-        <p><span class="n9to5">9to5</span> is a month-long digital art exhibition in Atlanta that dissolves the boundary between artist and audience by way of an experimental livestream and other emerging interfaces.</p>
-        <p>Unlike other art exhibitions, the ideal <span class="n9to5">9to5</span> experience is online, where patrons can interact with the projects and performances broadcasted, and influence the final artworks using our custom built suite of inputs.</p>
+
+  ${require('!raw-loader!./partials/live.html')}
+  ${require('!raw-loader!./partials/info.html')}
+
+  <div class="info-container">
+    <div class="nav-container nav-piece">
+      <div class="nav-blinder"></div>
+      <div class="nav">
+        <div class="nav__top"><a href="#top" class="scroll black no-slash">9to5 : Works in Progress</a></div>
+        <div class="nav__right"><div class="nav__right__rotate">
+          <span class="fixed">Sep 8 - Oct 6 2017</span>
+          <a href="#" class="digital no-slash subscribe">STAY UP TO DATE</a>
+        </div></div>
+        <div class="nav__left" id='nav__apply'><a class="no-slash">STAY TUNED</a></div>
       </div>
-      <div class="above-fold__date">
-        <div class="above-fold__date__row">
-          <span>8th</span>
-          <span class="line"></span>
-          <span>6th</span>
-        </div>
-        <div class="above-fold__date__row">
-          <span>SEPTEMBER</span>
-          <span class="raised"><span>to</span></span>
-          <span>OCTOBER</span>
-        </div>
-      </div>
-      <p class="above-fold__footer">
-        Join our livestream. Join our Works in Progress.<br />
-        If you are an artist or technologist with an interest in pushing the limits of collaboration, <a class="scroll" href="#open-call">submit</a> to the <span class="n9to5">9to5</span> Open Call.
-      </p>
     </div>
+    <div class="container" id="top">
+      ${require('!raw-loader!./partials/introduction.html')}
+      ${require('!raw-loader!./partials/partners.html')}
+      ${require('!raw-loader!./partials/team.html')}
+      ${require('!raw-loader!./partials/modal.html')}
+      ${require('!raw-loader!./partials/subscribe-modal.html')}
 
-    ${require('!raw-loader!./partials/introduction.html')}
-    ${require('!raw-loader!./partials/opencall.html')}
-    ${require('!raw-loader!./partials/tools.html')}
-    ${require('!raw-loader!./partials/partners.html')}
-    ${require('!raw-loader!./partials/team.html')}
-    ${require('!raw-loader!./partials/modal.html')}
-    ${require('!raw-loader!./partials/subscribe-modal.html')}
-
-    <div class="fixed-bottom">
-      <svg id="waveform">
-        <polygon></polygon>
-        <polyline></polyline>
-      </svg>
+      <div class="fixed-bottom nav-piece">
+        <svg id="waveform">
+          <polygon></polygon>
+          <polyline></polyline>
+        </svg>
+      </div>
     </div>
   </div>
 

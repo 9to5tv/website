@@ -17,7 +17,7 @@ gulp.task('s3', ['build'], function() {
 gulp.task('build', ['webpack:build']);
 
 gulp.task('webpack:build', function(callback) {
-  var webpackProductionConfig = require('./webpack.config.js');
+  var webpackProductionConfig = require('./webpack.production.config.js');
   // run webpack
   webpack(webpackProductionConfig, function(err, stats) {
     if(err) throw new gutil.PluginError('webpack:build', err);
