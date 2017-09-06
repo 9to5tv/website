@@ -60,6 +60,31 @@
   }
 }
 
+.pause-icon {
+  display: inline-block;
+  font-size: 0.8em;
+  height: 1em;
+  width: 1em;
+  position: relative;
+
+  &:before, &:after {
+    content: '';
+    width: 0.4em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: $blk;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
+
 .camera-frame {
   position: absolute;
   top: 0;
