@@ -4,6 +4,69 @@
   height: 100%;
 }
 
+.live-iframe-container {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  width: 480px;
+  max-width: 100%;
+  border: 4px solid $blk;
+  background-color: rgba(white, 0.5);
+
+  &:after {
+    padding-top: 62.5%;
+    display: block;
+    content: '';
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.2s;
+    z-index: 50;
+    font-size: 2.2rem;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.5);
+
+      .live-iframe-container__title__strip {
+        visibility: visible;
+      }
+    }
+
+    &__strip {
+      visibility: hidden;
+      padding: 0 1em;
+      height: 1.5em;
+      line-height: 1.5em;
+      background-color: white;
+      position: absolute;
+
+      &--tl {
+        top: 1em;
+        left: 0;
+      }
+
+      &--br {
+        bottom: 1em;
+        right: 0;
+      }
+    }
+  }
+
+  iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .camera-frame-wrapper {
   position: absolute;
   top: 16px;
@@ -150,6 +213,7 @@
   }
 
   &__statue {
+    pointer-events: none;
     text-align: center;
     margin: 16px auto;
     position: absolute;
