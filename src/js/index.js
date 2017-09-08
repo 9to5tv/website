@@ -19,7 +19,7 @@ $(document).ready(() => {
   const $countdown = $('.countdown-timer');
   let leftCTABound, rightCTABound;
   let navFaded;
-  const startTime = new Date('Fri, 08 Sep 2017 13:00:00 GMT');
+  const startTime = new Date('Fri, 08 Sep 2017 20:00:00 GMT');
 
   const updateCountdown = () => {
     const pad = num => (num < 10 ? '0' : '') + String(Math.floor(num));
