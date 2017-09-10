@@ -6,27 +6,25 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  devtool: '#inline-source-map',
+  devtool: '#cheap-module-eval-source-map',
   entry: [
-    './src/js/index.js',
+    'webpack-dev-server/client?http://0.0.0.0:8080',
+    './src/js/index.jsx',
     './src/styles/main.scss'
   ],
   output: {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
+    extensions: ['.js', '.jsx'],
     modules: ['node_modules']
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader?presets[]=es2015&retainLines=true'
-      },
-      {
-        test: /\.html$/,
-        use: ['html-loader', 'extract-loader', 'html-loader?interpolate']
+        use: ['react-hot-loader', 'babel-loader?presets[]=es2015,presets[]=react']
       },
       {
         test: /\.scss$/,

@@ -1,15 +1,20 @@
 @import 'variables.scss';
 @import 'mixins.scss';
-@import 'nav.scss';
-@import 'modal.scss';
-@import 'live.scss';
-@import 'applications.scss';
-@import 'above-fold.scss';
-@import 'artists.scss';
-@import 'opencall.scss';
-@import 'partners.scss';
-@import 'team.scss';
 
+@import './pages/home.scss';
+
+@import './components/live-container.scss';
+@import './components/camera-frame.scss';
+// @import 'nav.scss';
+// @import 'modal.scss';
+// @import 'applications.scss';
+// @import 'above-fold.scss';
+// @import 'artists.scss';
+// @import 'opencall.scss';
+// @import 'partners.scss';
+// @import 'team.scss';
+
+html,body,#app,[data-reactroot] { height: 100% !important; }
 html,body {
   margin: 0;
   padding: 0;
