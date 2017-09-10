@@ -10,7 +10,7 @@
   position: relative;
   margin: auto;
   text-align: center;
-  width: 480px;
+  width: 640px;
   max-width: 100%;
   border: 4px solid $blk;
   background-color: rgba(white, 0.5);
@@ -25,6 +25,13 @@
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  &:hover {
+    iframe {
+      transition: opacity 1.5s;
+      opacity: 0.5;
+    }
   }
 
   &__title {
@@ -154,7 +161,7 @@
     align-items: center;
 
     img { 
-      width: 490px;
+      width: 590px;
       max-width: 100%;
     }
   }

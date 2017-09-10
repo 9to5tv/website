@@ -11,6 +11,7 @@ class Nav extends React.Component {
           <a className='no-slash' href='http://live.9to5.tv'>Streaming</a>
           <a className='no-slash' href='http://gallery.9to5.tv'>Gallery</a>
           <Link className='no-slash' to='/'>Artists & Schedule</Link>
+          <a className='no-slash' href='mailto:info@9to5.tv'>Contact</a>
         </div>
       </div>
     );
