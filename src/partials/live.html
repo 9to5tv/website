@@ -13,7 +13,7 @@
       </div>
       <div class="camera-frame__corner camera-frame__corner--tr">
         <div class="camera-frame__corner__content">
-          <div class="camera-frame__corner__content__live"><span>STAND BY</span> <span class="pause-icon recording-dot--live"></span></div>
+          <div class="camera-frame__corner__content__live"><span>LIVE</span> <span class="recording-dot recording-dot--live"></span></div>
         </div>
       </div>
       <div class="camera-frame__corner camera-frame__corner--bl">
@@ -55,11 +55,14 @@
         
         <div class="camera-frame__title-block">
           <div class="live-iframe-container">
-            <div class="live-iframe-container__title">
-              <div class="live-iframe-container__title__strip live-iframe-container__title__strip--tl"><span class="n9to5">9to5</span> GOES</div>
-              <div class="live-iframe-container__title__strip live-iframe-container__title__strip--br">LIVE FRIDAY</div>
-            </div>
-            <iframe src="https://player.twitch.tv/?channel=9to5tv" frameborder="0" allowfullscreen="false" scrolling="no" height="100%" width="100%"></iframe>
+            <a class="live-iframe-container__link no-slash black" href="http://live.9to5.tv/">
+              <div class="live-iframe-container__title">
+                <span class="live-iframe-container__title__strip live-iframe-container__title__strip--tl"><span class="n9to5">9to5</span> IS LIVE</span>
+                <a href="http://live.9to5.tv/" class="live-iframe-container__title__strip live-iframe-container__title__strip--br">live.9to5.tv</a>
+              </div>
+              <!-- <div class="poster"><img src="img/fb-drawn.png"></div> -->
+              <iframe src="https://player.twitch.tv/?channel=9to5tv" frameborder="0" allowfullscreen="false" scrolling="no" height="100%" width="100%"></iframe>
+            </a>
           </div>
 <!--           <div class="camera-frame__title">
             <div class="camera-frame__title__original">/9to5.tv/</div>

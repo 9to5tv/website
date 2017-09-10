@@ -5,6 +5,8 @@
 }
 
 .live-iframe-container {
+  // display: inline-block;
+  display: block;
   position: relative;
   margin: auto;
   text-align: center;
@@ -17,6 +19,12 @@
     padding-top: 62.5%;
     display: block;
     content: '';
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   &__title {
@@ -55,6 +63,19 @@
         bottom: 1em;
         right: 0;
       }
+    }
+  }
+
+  .poster {
+
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      margin: auto;
+      text-align: center;
+      width: 480px;
+      max-width: 100%;
+      height: auto;
     }
   }
 
@@ -161,6 +182,7 @@
     bottom: 0;
     right: 0;
     left: 0;
+    // text-align: center;
   }
 
   &__title {
