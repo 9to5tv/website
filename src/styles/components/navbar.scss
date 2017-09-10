@@ -1,0 +1,27 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background-color: white;
+  z-index: 1000;
+
+  &__content {
+    width: 80%;
+    max-width: 1188px;
+    margin: auto;
+    font-size: 1.2rem;
+
+    a {
+      color: black;
+      margin-right: 1.2em;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+}
