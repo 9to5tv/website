@@ -6,7 +6,7 @@ class LiveContainer extends React.Component {
   render() {
     return (
       <div className='live-container'>
-        <CameraFrame background={require('../../img/statue.png')}>
+        <CameraFrame background={require('../../img/statue2.png')}>
           <div className='live-iframe-container'>
             <div className='live-iframe-container__link no-slash black' href='http://live.9to5.tv/'>
               <div className='live-iframe-container__title'>
