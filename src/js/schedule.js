@@ -43,7 +43,8 @@ export default {
         },
         {
           title: 'Exploring Wearable Fashion',
-          artist: 'Streetcat (Maggie Kane)',
+          artist: 'Maggie Kane',
+          artistUrl: 'streetcat.media',
           type: types.WORKSHOP,
           description: '',
           day: 'Tuesday',
@@ -64,7 +65,8 @@ export default {
         },
         {
           title: 'Women\'s Techmaker\'s Panel',
-          artist: 'Streetcat (Maggie Kane)',
+          artist: 'Maggie Kane',
+          artistUrl: 'streetcat.media',
           type: types.SHOW,
           description: '',
           day: 'Wednesday',
@@ -93,7 +95,8 @@ export default {
         },
         {
           title: 'AiTL',
-          artist: 'Streetcat (Maggie Kane)',
+          artist: 'Maggie Kane',
+          artistUrl: 'streetcat.media',
           type: types.SHOW,
           description: 'Google AI Magenta Demo',
           day: 'Thursday',
@@ -113,7 +116,7 @@ export default {
         },
         {
           title: 'TBA',
-          artist: 'Harald Haraladsson',
+          artist: 'Harald Haraldsson',
           type: types.SHOW,
           description: '',
           time: '13:00'
@@ -136,5 +139,77 @@ export default {
     }
   ],
   'gallery': [
+    {
+      title: 'Basix',
+      artist: 'Kevin Siwoff',
+      artistUrl: 'kevinsiwoff.com',
+      description: 'the importance of ecommerce (Coming Sep. 18th)',
+    },
+    {
+      title: 'Supercruft',
+      artist: 'Andrew Venell',
+      artistUrl: 'andrewvenell.com',
+      description: 'abstract video mosh (Coming Sep 13th)',
+    },
+    {
+      title: 'Streetcat.Media',
+      artist: 'Maggie Kane',
+      artistUrl: 'streetcat.media',
+      description: 'unending new media knowhow',
+    },
+    {
+      title: 'Holypager',
+      artist: 'Brannon Dorsey ',
+      artistUrl: 'brannondorsey.com',
+      description: 'pagers printing pages (Coming Sep. 18th)',
+    },
+    {
+      title: 'DRAWN',
+      artist: 'SuperBright',
+      artistUrl: 'superbright.me',
+      description: 'head-to-head vr sketch',
+    },
+    {
+      title: 'From Coast to Coast',
+      artist: 'Tim Kim',
+      projectUrl: 'http://gallery.9to5.tv/from-coast-to-coast',
+      description: 'worldwide sunrise and set',
+    },
+    {
+      title: 'Points-Lines-Planes-Blobs',
+      artist: 'Bradley Bowers',
+      artistUrl: 'bradleylbowers.com',
+      description: '3d modeling workshops',
+    },
+    {
+      title: 'WWWWWWWWWWWWW.XYZ',
+      artist: 'Point in Passing',
+      projectUrl: 'http://gallery.9to5.tv/wwwwwwwwwwwww-xyz',
+      description: 'keyboard vj',
+    },
+    {
+      title: 'EPRA',
+      artist: 'Adam Shavin',
+      projectUrl: 'http://gallery.9to5.tv/epra',
+      description: 'files transformed into music & poetry',
+    },
+    {
+      title: 'Sign and T-Rex in Red',
+      artist: 'Damjanski',
+      artistUrl: 'damjanski.com',
+      description: 'live protest by you (Coming Sep. 29th)',
+    },
+    {
+      title: 'Dream.Almost.Digital',
+      artist: 'Johan Nordberg',
+      projectUrl: 'http://gallery.9to5.tv/dream-canvas',
+      description: 'deep dream live sketch',
+    },
+    {
+      title: 'Us, Aggregated',
+      artist: 'Mimi Onuha',
+      artistUrl: 'mimionuoha.com',
+      description: 'family photos with crowdsourced comparison',
+    }
   ]
 }

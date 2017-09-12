@@ -37,6 +37,9 @@ class Schedule extends React.Component {
         </div>
         <div className='schedule__section'>
           <h2 className='schedule__section__title'>GALLERY<br />/{'\u00A0'}INSTALLATIONS</h2>
+          {schedule.gallery.map(p => (
+            <div key={p.title+p.artist} className='schedule__section__project'><Project project={p} /></div>
+          ))}
         </div>
       </div>
     );

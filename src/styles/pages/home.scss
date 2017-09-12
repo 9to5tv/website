@@ -3,4 +3,10 @@
 
 .home {
   height: 100%;
+
+  &__nav {
+    width: 80%;
+    max-width: 1188px;
+    margin: auto;
+  }
 }

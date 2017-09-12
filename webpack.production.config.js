@@ -8,27 +8,25 @@ const path = require('path');
 
 module.exports = {
   // devtool: '#inline-source-map',
-  entry: {
-    bundle: './src/js/index.js',
-    css: './src/styles/main.scss'
-  },
+  entry: [
+    './src/js/index.jsx',
+    './src/styles/main.scss'
+  ],
   output: {
-    filename: '[name].js',
+    // filename: '[name].js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
+    extensions: ['.js', '.jsx'],
     modules: ['node_modules']
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader?presets[]=es2015&retainLines=true'
-      },
-      {
-        test: /\.html$/,
-        use: ['html-loader', 'extract-loader', 'html-loader?interpolate']
+        use: 'babel-loader?presets[]=es2015,presets[]=react'
       },
       {
         test: /\.scss$/,
@@ -111,11 +109,5 @@ module.exports = {
     }),
     new StyleExtHtmlWebpackPlugin(),
     new webpack.optimize.UglifyJsPlugin({ output: { ascii_only: true } })
-  ],
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    host: '0.0.0.0',
-    port: 8080
-  }
+  ]
 };

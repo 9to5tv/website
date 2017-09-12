@@ -4,7 +4,7 @@ const Team = () => (
   <div className='container__page team last' id='team'>
     <div className='container__page__contents'>
       <h3 className='container__page__subheading'>/ Team</h3>
-      <p>The <span className='n9to5'>9to5</span> team is incredibly excited to share our second iteration with you. The concept has evolved significantly from our first weeklong exhibition in early 2016, which, like most early projects, relied heavily on those friends willing to pick up a broom or a camera or a paintbrush. Today, with the help of FIELD EXPERIMENT and our sponsors, we have built a fully realized platform for artists and technologists who, just like us, want to make projects that invent new ways of making, collaborating, and teaching. We&rsquo;re excited to lend the hands we can... just as our friends did for us. See you in September.</p>
+      <p>The <span className='n9to5'>9to5</span> team is incredibly excited to share our second iteration with you. The concept has evolved significantly from our first weeklong exhibition in early 2016, which, like most early projects, relied heavily on those friends willing to pick up a broom or a camera or a paintbrush. Today, with the help of FIELD EXPERIMENT and our sponsors, we have built a fully realized platform for artists and technologists who, just like us, want to make projects that invent new ways of making, collaborating, and teaching. We&rsquo;re excited to lend the hands we can... just as our friends did for us.</p>
 
       <h3 className='container__page__subheading'>/ Pablo Gnecco</h3>
       <p>

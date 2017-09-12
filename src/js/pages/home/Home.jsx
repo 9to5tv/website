@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from '../../components/Nav';
 import LiveContainer from '../../components/LiveContainer';
 import GalleryContainer from '../../components/GalleryContainer';
 import FollowUs from '../../components/FollowUs';
@@ -11,6 +12,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className='home'>
+        <div className='home__nav'><Nav /></div>
         <LiveContainer />
         <InfoBlock />
         <GalleryContainer />
