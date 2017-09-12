@@ -1,0 +1,33 @@
+@import './schedule/project.scss';
+
+.schedule {
+  padding: $containerPadding + $borderWidth + 48px $containerPadding + $borderWidth $containerPadding + $borderWidth;
+
+  &__section {
+    width: 80%;
+    max-width: 1188px;
+    margin: 0 auto 32px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &__title {
+      font-size: 1.5rem;
+
+      @include respond-to('medium') {
+        font-size: 2.5rem;
+      }
+    }
+
+    &__date {
+      display: inline-block;
+      background-color: #ddd;
+      margin-top: 3rem;
+      font-size: 1.15rem;
+    }
+
+    &__project {
+      border-bottom: 1px solid black;
+    }
+  }
+
+}

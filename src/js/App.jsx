@@ -1,14 +1,13 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Home } from './pages';
-import Nav from './components/Nav';
+import { Home, Schedule } from './pages';
 
 class App extends React.Component {
 
   render() {
     return (
       <div>
-        <Nav />
+        <Route path='/schedule' component={Schedule} />
         <Route exact path='/' component={Home} />
       </div>
     );
