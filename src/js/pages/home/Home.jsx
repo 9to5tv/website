@@ -1,6 +1,10 @@
 import React from 'react';
-import LiveContainer from '../components/LiveContainer';
-import GalleryContainer from '../components/GalleryContainer';
+import LiveContainer from '../../components/LiveContainer';
+import GalleryContainer from '../../components/GalleryContainer';
+import FollowUs from '../../components/FollowUs';
+import InfoBlock from './InfoBlock';
+import Partners from './Partners';
+import Team from './Team';
 
 class Home extends React.Component {
 
@@ -8,7 +12,11 @@ class Home extends React.Component {
     return (
       <div className='home'>
         <LiveContainer />
+        <InfoBlock />
         <GalleryContainer />
+        <Partners />
+        <FollowUs />
+        <Team />
       </div>
     );
   }
