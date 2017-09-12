@@ -7,10 +7,11 @@ const path = require('path');
 
 module.exports = {
   devtool: '#cheap-module-eval-source-map',
+  context: path.resolve(__dirname, 'src'),
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080',
-    './src/js/index.jsx',
-    './src/styles/main.scss'
+    './js/index.jsx',
+    './styles/main.scss'
   ],
   output: {
     path: path.resolve(__dirname, 'dist')
@@ -34,7 +35,7 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+          'file-loader?hash=sha512&digest=hex&name=[path][name]-[hash].[ext]',
           {
             loader: 'image-webpack-loader',
             query: {
@@ -65,12 +66,12 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './index.html',
       minify: {},
       chunks: []
     }),
     new FaviconsWebpackPlugin({
-      logo: './src/img/favicon.png',
+      logo: './img/favicon.png',
       prefix: 'icons/',
       icons: {
         android: true,
