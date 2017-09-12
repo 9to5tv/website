@@ -8,12 +8,12 @@ const Partners = () => (
         <a href='http://www.fieldexperimentatl.com/' className='no-slash big-sponsor' target='_blank'>
           <img height='auto' width='450' src={require('../../../img/fexp.png')} />
         </a>
+        <a href='http://creativity.gsu.edu/' className='no-slash big-sponsor' target='_blank'><img height='auto' width='450' src={require('../../../img/cmii.png')} /></a>
       </div>
 
       <h3 className='container__page__subheading'>/ Sponsors</h3>
       <div className='sponsors'>
         <a href='https://mailchimp.com' className='no-slash' target='_blank'><img height='auto' width='230' src={require('../../../img/mailchimp.png')} /></a>
-        <a href='http://www.gsu.edu/' className='no-slash' target='_blank'><img height='auto' width='160' src={require('../../../img/gsu.png')} /></a>
         <a href='http://www.chemistryagency.com/' className='no-slash' target='_blank'><img height='auto' width='220' src={require('../../../img/chemistry.png')} /></a>
         <a href='https://www.wafflehouse.com/' className='no-slash' target='_blank'><img height='auto' width='200' src={require('../../../img/waho.png')} /></a>
         <a href='http://g.co/ami' className='no-slash' target='_blank'><img height='auto' src={require('../../../img/ami.png')} /></a>
