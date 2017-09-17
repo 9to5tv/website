@@ -148,7 +148,320 @@ export default {
           time: '15:00'
         }
       ]
-    }
+    },
+    {
+      date: '9/19/2017',
+      events: [
+        {
+          title: 'Moar AR',
+          artist: 'Andy Pruett',
+          type: types.SHOW,
+          description: '',
+          time: '9:00'
+        },
+        {
+          title: 'Crafty AF',
+          artist: 'Very Sandwich',
+          type: types.SHOW,
+          description: '',
+          time: '10:00'
+        },
+        {
+          title: 'First Impressions',
+          artist: 'Very Sandwich',
+          type: types.SHOW,
+          description: '',
+          time: '11:00'
+        },
+        {
+          title: 'The Influencers Present',
+          artist: 'Sean Fahie',
+          type: types.SHOW,
+          description: '',
+          time: '13:30'
+        },
+        {
+          title: 'Busy Boys',
+          artist: 'SlimeNet',
+          type: types.SHOW,
+          description: '',
+          day: 'Tuesday',
+          time: '15:00'
+        }
+      ]
+    },
+    {
+      date: '9/20/2017',
+      events: [
+        {
+          title: 'Dr. Tony\'s Mean Meme Machine',
+          artist: 'Tony Zaret',
+          type: types.SHOW,
+          description: '',
+          day: 'Wednesday',
+          time: '16:00'
+        }
+      ]
+    },
+    {
+      date: '9/21/2017',
+      events: [
+        {
+          title: 'Bench Talk',
+          artist: 'George Gomez and Gavin Bernard',
+          type: types.SHOW,
+          description: '',
+          day: 'Thursday',
+          time: '14:00'
+        },
+        {
+          title: 'StrucciMovies Live',
+          artist: 'Shannon Strucci',
+          type: types.SHOW,
+          description: '',
+          day: 'Thursday',
+          time: '16:00'
+        }
+      ]
+    },
+    {
+      date: '9/22/2017',
+      events: [
+        {
+          title: 'TGIF / IDGAF',
+          artist: 'Travis Broyles',
+          type: types.SHOW,
+          description: '',
+          time: '11:00'
+        },
+        {
+          title: 'Points, Lines, Planes, and Blobs',
+          artist: 'Bradley Bowers',
+          type: types.WORKSHOP,
+          description: '',
+          time: '15:30'
+        },
+        {
+          title: 'Beije / Karaoke',
+          artist: 'MAMMAL Gallery Concert',
+          type: types.SHOW,
+          description: '',
+          time: '19:00'
+        }
+      ]
+    },
+    {
+      date: '9/25/2017',
+      events: [
+      ]
+    },
+    {
+      date: '9/26/2017',
+      events: [
+        {
+          title: 'AR Development Glossary',
+          artist: 'Andy Pruett',
+          type: types.SHOW,
+          description: '',
+          time: '9:00'
+        },
+        {
+          title: 'Crafty AF',
+          artist: 'Very Sandwich',
+          type: types.SHOW,
+          description: '',
+          time: '10:00'
+        },
+        {
+          title: 'First Impressions',
+          artist: 'Very Sandwich',
+          type: types.SHOW,
+          description: '',
+          time: '11:00'
+        },
+        {
+          title: 'The Influencers Present',
+          artist: 'Sean Fahie',
+          type: types.SHOW,
+          description: '',
+          time: '13:30'
+        },
+        {
+          title: 'Busy Boys',
+          artist: 'SlimeNet',
+          type: types.SHOW,
+          description: '',
+          day: 'Tuesday',
+          time: '15:00'
+        }
+      ]
+    },
+    {
+      date: '9/27/2017',
+      events: [
+        {
+          title: 'Dr. Tony\'s Mean Meme Machine',
+          artist: 'Tony Zaret',
+          type: types.SHOW,
+          description: '',
+          day: 'Wednesday',
+          time: '16:00'
+        }
+      ]
+    },
+    {
+      date: '9/28/2017',
+      events: [
+        {
+          title: 'Bench Talk',
+          artist: 'George Gomez and Gavin Bernard',
+          type: types.SHOW,
+          description: '',
+          day: 'Thursday',
+          time: '14:00'
+        },
+        {
+          title: 'StrucciMovies Live',
+          artist: 'Shannon Strucci',
+          type: types.SHOW,
+          description: '',
+          day: 'Thursday',
+          time: '16:00'
+        }
+      ]
+    },
+    {
+      date: '9/29/2017',
+      events: [
+        {
+          title: 'TGIF / IDGAF',
+          artist: 'Travis Broyles',
+          type: types.SHOW,
+          description: '',
+          time: '11:00'
+        },
+        {
+          title: 'Points, Lines, Planes, and Blobs',
+          artist: 'Bradley Bowers',
+          type: types.WORKSHOP,
+          description: '',
+          time: '15:30'
+        },
+        {
+          title: 'No Eyes / Genko',
+          artist: 'MAMMAL Gallery Concert',
+          type: types.SHOW,
+          description: '',
+          time: '19:00'
+        }
+      ]
+    },
+    {
+      date: '10/02/2017',
+      events: [
+        {
+          title: 'Us, Aggregated',
+          artist: 'Mimi Onuoha',
+          type: types.SHOW,
+          description: '',
+          time: '17:00'
+        }
+      ]
+    },
+    {
+      date: '10/03/2017',
+      events: [
+        {
+          title: 'Shared AR Experiences',
+          artist: 'Andy Pruett',
+          type: types.SHOW,
+          description: '',
+          time: '9:00'
+        },
+        {
+          title: 'Crafty AF',
+          artist: 'Very Sandwich',
+          type: types.SHOW,
+          description: '',
+          time: '10:00'
+        },
+        {
+          title: 'First Impressions',
+          artist: 'Very Sandwich',
+          type: types.SHOW,
+          description: '',
+          time: '11:00'
+        },
+        {
+          title: 'The Influencers Present',
+          artist: 'Sean Fahie',
+          type: types.SHOW,
+          description: '',
+          time: '13:30'
+        },
+        {
+          title: 'Busy Boys',
+          artist: 'SlimeNet',
+          type: types.SHOW,
+          description: '',
+          day: 'Tuesday',
+          time: '15:00'
+        }
+      ]
+    },
+    {
+      date: '10/04/2017',
+      events: [
+        {
+          title: 'Dr. Tony\'s Mean Meme Machine',
+          artist: 'Tony Zaret',
+          type: types.SHOW,
+          description: '',
+          day: 'Wednesday',
+          time: '16:00'
+        }
+      ]
+    },
+    {
+      date: '10/05/2017',
+      events: [
+        {
+          title: 'Bench Talk',
+          artist: 'George Gomez and Gavin Bernard',
+          type: types.SHOW,
+          description: '',
+          day: 'Thursday',
+          time: '14:00'
+        },
+        {
+          title: 'StrucciMovies Live',
+          artist: 'Shannon Strucci',
+          type: types.SHOW,
+          description: '',
+          day: 'Thursday',
+          time: '16:00'
+        }
+      ]
+    },
+    {
+      date: '10/06/2017',
+      events: [
+        {
+          title: 'TGIF / IDGAF',
+          artist: 'Travis Broyles',
+          type: types.SHOW,
+          description: '',
+          time: '11:00'
+        },
+        {
+          title: 'Points, Lines, Planes, and Blobs',
+          artist: 'Bradley Bowers',
+          type: types.WORKSHOP,
+          description: '',
+          time: '15:30'
+        }
+      ]
+    },
   ],
   'gallery': [
     {
@@ -219,7 +532,7 @@ export default {
     },
     {
       title: 'Us, Aggregated',
-      artist: 'Mimi Onuha',
+      artist: 'Mimi Onuoha',
       artistUrl: 'mimionuoha.com',
       description: 'family photos with crowdsourced comparison',
     }

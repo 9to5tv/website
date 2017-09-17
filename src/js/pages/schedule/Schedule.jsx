@@ -1,5 +1,6 @@
 import React from 'react';
 import Frame from '../../components/Frame';
+import ScheduleContainer from './ScheduleContainer';
 import Project from './Project';
 import schedule from '../../schedule';
 
@@ -24,16 +25,7 @@ class Schedule extends React.Component {
         <Frame />
         <div className='schedule__section'>
           <h2 className='schedule__section__title'>LIVE<br />/{'\u00A0'}BROADCASTS</h2>
-          {schedule.live.map(date => (
-            <div key={(new Date(date.date))}>
-              <div className='schedule__section__date'>{renderDate(date.date)}</div>
-              <div>
-                {date.events.map(p => (
-                  <div key={p.title+p.artist} className='schedule__section__project'><Project project={p} /></div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <ScheduleContainer events={schedule.live} />
         </div>
         <div className='schedule__section'>
           <h2 className='schedule__section__title'>GALLERY<br />/{'\u00A0'}INSTALLATIONS</h2>

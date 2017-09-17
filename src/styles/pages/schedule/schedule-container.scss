@@ -1,0 +1,48 @@
+.schedule-container {
+
+  &__dates {
+    white-space: nowrap;
+    overflow-x: auto;
+
+    &__date {
+      cursor: pointer;
+      display: inline-block;
+      background-color: rgba(black, 0.05);
+      margin-top: 3rem;
+      margin-right: 1rem;
+      font-size: 1.15rem;
+
+      &--active, :hover {
+        background-color: rgba(black, 0.9);
+        color: white;
+      }
+    }
+  }
+
+  &__events {
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 16px;
+
+      &__time {
+        max-width: 4.5em;
+        display: flex;
+        flex: 0 1 4.5em;
+        justify-content: space-between;
+        margin-right: 2.5em;
+      }
+
+      &__event {
+        flex: 1 1 100%;
+        // margin-left: 3em;
+      }
+    }
+  }
+}
