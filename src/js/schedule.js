@@ -115,18 +115,18 @@ export default {
           time: '11:00'
         },
         {
-          title: 'TBA',
-          artist: 'Harald Haraldsson',
-          type: types.SHOW,
-          description: '',
-          time: '13:00'
-        },
-        {
-          title: 'TBA',
+          title: 'Points, Lines, Planes, and Blobs',
           artist: 'Bradley Bowers',
           type: types.WORKSHOP,
           description: '',
-          time: '15:00'
+          time: '15:30'
+        },
+        {
+          title: '10th Letter / Merriam-Webster / Josh Dean ',
+          artist: '',
+          type: types.SHOW,
+          description: '',
+          time: '19:00'
         },
         {
           title: 'Stupid Ideas Hackathon',
@@ -134,6 +134,18 @@ export default {
           type: types.WORKSHOP,
           description: '',
           time: '19:00'
+        }
+      ]
+    },
+    {
+      date: '9/18/2017',
+      events: [
+        {
+          title: 'A\u2014B',
+          artist: 'Harald Haraldsson',
+          type: types.SHOW,
+          description: '',
+          time: '15:00'
         }
       ]
     }
@@ -212,4 +224,4 @@ export default {
       description: 'family photos with crowdsourced comparison',
     }
   ]
-}
+};

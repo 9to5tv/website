@@ -3,14 +3,16 @@ const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
   // devtool: '#inline-source-map',
+  context: path.resolve(__dirname, 'src'),
   entry: [
-    './src/js/index.jsx',
-    './src/styles/main.scss'
+    './js/index.jsx',
+    './styles/main.scss'
   ],
   output: {
     // filename: '[name].js',
@@ -39,7 +41,7 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+          'file-loader?hash=sha512&digest=hex&name=[path][name]-[hash].[ext]',
           {
             loader: 'image-webpack-loader',
             query: {
@@ -70,13 +72,13 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './index.html',
       minify: {},
       chunks: []
     }),
     new ExtractTextPlugin('styles.css'),
     new FaviconsWebpackPlugin({
-      logo: './src/img/favicon.png',
+      logo: './img/favicon.png',
       prefix: 'icons/',
       icons: {
         android: true,
@@ -92,7 +94,7 @@ module.exports = {
       }
     }),
     new FaviconsWebpackPlugin({
-      logo: './src/img/favicon.png',
+      logo: './img/favicon.png',
       prefix: '/',
       icons: {
         android: false,
@@ -108,6 +110,9 @@ module.exports = {
       }
     }),
     new StyleExtHtmlWebpackPlugin(),
+    new StaticSiteGeneratorPlugin({
+      paths: ['/']
+    }),
     new webpack.optimize.UglifyJsPlugin({ output: { ascii_only: true } })
   ]
 };

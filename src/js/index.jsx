@@ -9,5 +9,4 @@ const app = (
   </BrowserRouter>
 );
 
-
 render(app, document.getElementById('app'));

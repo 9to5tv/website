@@ -14,7 +14,7 @@
     }
   }
 
-  &__links {
+  &__links .hidden-mobile {
     display: none;
 
     @include respond-to('medium') {
