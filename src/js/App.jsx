@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Home, Schedule } from './pages';
+import { Home, Schedule, Artist } from './pages';
 
 class App extends React.Component {
 
@@ -9,6 +9,7 @@ class App extends React.Component {
       <div>
         <Route path='/schedule' component={Schedule} />
         <Route exact path='/' component={Home} />
+        <Route path='/artists/:id' component={Artist} />
       </div>
     );
   }

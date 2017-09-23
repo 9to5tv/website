@@ -1,0 +1,62 @@
+.artist {
+  height: 100%;
+
+  &__nav {
+    width: 80%;
+    max-width: 1188px;
+    margin: auto;
+  }
+
+  &__content {
+    width: 80%;
+    max-width: 42rem;
+    margin: 32px auto;
+  }
+
+  &__video {
+    margin-top: 32px;
+    position: relative;
+    text-align: center;
+
+    > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      padding-top: 56.25%;
+    }
+  }
+
+  &__images {
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__description {
+    font-size: 1.2rem;
+  }
+
+  &__title {
+    margin-top: 32px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    @include respond-to('medium') {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__name {
+    margin-top: 32px;
+    font-size: 1.5rem;
+  }
+
+}
