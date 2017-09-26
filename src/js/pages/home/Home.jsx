@@ -1,24 +1,20 @@
 import React from 'react';
 import Nav from '../../components/Nav';
 import LiveContainer from '../../components/LiveContainer';
+import LogoContainer from '../../components/LogoContainer';
 import GalleryContainer from '../../components/GalleryContainer';
 import FollowUs from '../../components/FollowUs';
-import InfoBlock from './InfoBlock';
 import Partners from './Partners';
-import Team from './Team';
 
 class Home extends React.Component {
 
   render() {
     return (
       <div className='home'>
+        <LogoContainer />
         <div className='home__nav'><Nav /></div>
-        <LiveContainer />
-        <InfoBlock />
-        <GalleryContainer />
         <Partners />
         <FollowUs />
-        <Team />
       </div>
     );
   }

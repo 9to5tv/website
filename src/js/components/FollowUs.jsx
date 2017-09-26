@@ -51,6 +51,17 @@ const FollowUs = () => (
         <span className='md'>/</span>
       </a>
       <a className='opencall__cta__row no-slash'><br /></a>
+      <div className='opencall__cta__row'>
+        <span className='sm'>E</span>
+        <span className='sm'>–</span>
+        <span className='sm'>M</span>
+        <span className='sm'>A</span>
+        <span className='sm'>I</span>
+        <span className='sm'>L</span>
+        <span className='sm'>&nbsp;</span>
+        <span className='sm'>U</span>
+        <span className='sm'>S</span>
+      </div>
       <a href='mailto:info@9to5.tv' target='_blank' className='opencall__cta__row no-slash'>
         <span className='md'>/</span>
         <span className='md'>i</span>

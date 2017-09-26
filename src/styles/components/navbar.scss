@@ -2,12 +2,27 @@
   // width: 80%;
   // max-width: 1188px;
   margin: auto;
-  font-size: 1.2rem;
+  text-align: center;
+  font-size: 1.5rem;
   padding: 0 1.5em;
 
   a {
     color: black;
-    margin-right: 1.2em;
+    margin: 0;
+
+    &:after {
+      margin: 0 1.2em;
+      content: ' // ';
+      color: black !important;
+    }
+
+    &:before {
+      content: none !important;
+    }
+
+    &:last-child:after {
+      content: none;
+    }
 
     &:hover {
       color: $blue;

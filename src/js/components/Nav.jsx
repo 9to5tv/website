@@ -6,12 +6,12 @@ class Nav extends React.Component {
   render() {
     return (
       <div className='navbar'>
-        <Link className='n9to5'to='/'>9to5.tv</Link>
+       {this.props.includeLogo ? <Link className='n9to5'to='/'>9to5.tv</Link> : null}
         <span className='navbar__links'>
-          <a className='no-slash hidden-mobile' href='http://live.9to5.tv'>Streaming</a>
-          <a className='no-slash hidden-mobile' href='http://gallery.9to5.tv'>Gallery</a>
-          <Link className='no-slash' to='/schedule'>Schedule</Link>
-          <a className='no-slash hidden-mobile' href='mailto:info@9to5.tv'>Contact</a>
+          <a href='http://live.9to5.tv'>Live Streaming</a>
+          <a href='http://gallery.9to5.tv'>Online Gallery</a>
+          <Link to='/schedule'>Schedule</Link>
+          <Link to='/about'>About</Link>
         </span>
       </div>
     );
