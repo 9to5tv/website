@@ -273,8 +273,8 @@ export default {
           time: '10:00'
         },
         {
-          title: 'First Impressions',
-          artist: 'Very Sandwich',
+          title: 'Thank You For Stopping By',
+          artist: 'Gavin',
           type: types.SHOW,
           description: '',
           time: '11:00'
@@ -284,7 +284,7 @@ export default {
           artist: 'Sean Fahie',
           type: types.SHOW,
           description: '',
-          time: '13:30'
+          time: '14:00'
         },
         {
           title: 'Busy Boys',
@@ -300,18 +300,75 @@ export default {
       date: '9/27/2017',
       events: [
         {
-          title: 'Dr. Tony\'s Mean Meme Machine',
-          artist: 'Tony Zaret',
+          title: 'ATLtvhead works in progress',
+          artist: '',
+          type: types.SHOW,
+          description: '',
+          day: 'Wednesday',
+          time: '14:00'
+        },
+         {
+          title: 'ATLtvhead works in progress',
+          artist: '',
+          type: types.SHOW,
+          description: '',
+          day: 'Wednesday',
+          time: '15:00'
+        },
+        {
+          title: 'ATLtvhead works in progress',
+          artist: '',
           type: types.SHOW,
           description: '',
           day: 'Wednesday',
           time: '16:00'
+        },
+         {
+          title: 'ATLtvhead works in progress',
+          artist: '',
+          type: types.SHOW,
+          description: '',
+          day: 'Wednesday',
+          time: '17:00'
+        },
+        {
+          title: 'Performance',
+          artist: 'Hommeboy',
+          type: types.SHOW,
+          description: '',
+          day: 'Wednesday',
+          time: '19:00'
+        },
+        {
+          title: 'War Could Break Out at Any Time and Comedy Could Become Illegal So We\'re Using This Talk Show to Convince an Omnipotent Dragon to Cast Off His Policy of Nonintervention in Human Affairs to Fight on the Side of Good!',
+          artist: 'Modugno and Mallory Present',
+          type: types.SHOW,
+          description: '',
+          day: 'Wednesday',
+          time: '21:00'
         }
       ]
     },
     {
       date: '9/28/2017',
       events: [
+// WAITING ON CONFIRMATION
+//          {
+//           title: 'Dr. Tony\'s Mean Meme Machine',
+//           artist: 'Tony Zaret',
+//           type: types.SHOW,
+//           description: '',
+//           day: 'Thursday',
+//           time: '9:00'
+//         },
+//         {
+//           title: 'Points, Lines, Planes, and Blobs',
+//           artist: 'Bradley Bowers',
+//           type: types.WORKSHOP,
+//           description: '',
+//           day: 'Thursday',
+//           time: '12:00'
+//         },
         {
           title: 'Bench Talk',
           artist: 'George Gomez and Gavin Bernard',
@@ -327,6 +384,14 @@ export default {
           description: '',
           day: 'Thursday',
           time: '16:00'
+        },
+        {
+          title: 'The Samm Severin Show',
+          artist: 'Samm Severin',
+          type: types.SHOW,
+          description: '',
+          day: 'Thursday',
+          time: '21:00'
         }
       ]
     },
@@ -334,19 +399,35 @@ export default {
       date: '9/29/2017',
       events: [
         {
+          title: 'Stream Daddy\s',
+          artist: 'Allie & Dads',
+          type: types.SHOW,
+          description: '',
+          day: 'Friday',
+          time: '10:30'
+        },
+        {
           title: 'TGIF / IDGAF',
           artist: 'Travis Broyles',
           type: types.SHOW,
           description: '',
-          time: '11:00'
+          time: '12:00'
         },
         {
-          title: 'Points, Lines, Planes, and Blobs',
-          artist: 'Bradley Bowers',
-          type: types.WORKSHOP,
+          title: 'Musical Poetry Works in Progress',
+          artist: 'Adam Shavin',
+          type: types.SHOW,
           description: '',
-          time: '15:30'
+          day: 'Friday',
+          time: '14:00'
         },
+//         {
+//           title: 'Points, Lines, Planes, and Blobs',
+//           artist: 'Bradley Bowers',
+//           type: types.WORKSHOP,
+//           description: '',
+//           time: '15:30'
+//         },
         {
           title: 'No Eyes / Genko',
           artist: 'MAMMAL Gallery Concert',
