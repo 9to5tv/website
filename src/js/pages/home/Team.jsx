@@ -25,6 +25,16 @@ const Team = () => (
       <p>
         <a className='digital' target='_blank' href='http://ericrabinowitz.com/'>ericrabinowitz.com</a> Web developer and creative coder based in Atlanta, who believes we must all nudge the Internet to be more open and share its feelings with us. Currently working on a digital platform to help artists manage their networks and get referred to collaboration or hiring opportunities.
       </p>
+
+      <h3 className='container__page__subheading'>/ Mike Morgan</h3>
+      <p>
+        <a className='digital' target='_blank' href='http://mediateamgo.com/'>mediateamgo.com</a> Video producer and occasional video artist from Atlanta, Georgia. Since graduating from Georgia State he has worked in various fields of video production, from crewing on TV shows and movie sets to producing livestreams for eSports tournaments and advertising clients. He founded the <a href='http://www.yallywood.org/' target='_blank' className='digital no-slash'>Y’allywood Film Festival</a> in order to help build a culture of support for independent cinema in Atlanta and throughout the southeast.
+      </p>
+
+      <h3 className='container__page__subheading'>/ Kristan Woolford</h3>
+      <p>
+        <a className='digital' target='_blank' href='http://kristanwoolford.com/'>kristanwoolford.com</a> Digital production swiss army knife and lover of experimental filmmaking, Woolford is passionate about conceptualizing alternative forms of interactive narrative and documentary storytelling. He currently works out of Atlanta as Creative Director of Black Noize Media and CTO of Avaloy Studios. 
+      </p>
     </div>
   </div>
 );
