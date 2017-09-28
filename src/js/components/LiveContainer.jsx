@@ -13,7 +13,7 @@ class LiveContainer extends React.Component {
                 <span className='live-iframe-container__title__strip live-iframe-container__title__strip--tl'>STREAM <span className='n9to5'>9to5</span></span>
                 <span className='live-iframe-container__title__strip live-iframe-container__title__strip--br'>/ live.9to5.tv /</span>
               </a>
-              <iframe src='https://player.twitch.tv/?channel=9to5tv' frameBorder='0' allowFullScreen='false' scrolling='no' height='100%' width='100%'></iframe>
+              <iframe src='https://player.twitch.tv/?channel=9to5tv&muted=true' frameBorder='0' allowFullScreen='false' scrolling='no' height='100%' width='100%'></iframe>
             </div>
           </div>
         </CameraFrame>
