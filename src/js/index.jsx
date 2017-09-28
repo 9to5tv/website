@@ -26,3 +26,5 @@ const app = (
 );
 
 render(app, document.getElementById('app'));
+
+export default app;

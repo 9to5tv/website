@@ -112,9 +112,12 @@ module.exports = {
       }
     }),
     new StyleExtHtmlWebpackPlugin(),
-    new StaticSiteGeneratorPlugin({
-      paths: ['/']
-    }),
+    // new StaticSiteGeneratorPlugin({
+    //   paths: ['/'],
+    //   globals: {
+    //     window: {}
+    //   }
+    // }),
     new webpack.optimize.UglifyJsPlugin({ output: { ascii_only: true } })
   ]
 };
