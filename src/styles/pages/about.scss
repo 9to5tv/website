@@ -1,5 +1,11 @@
 .about-page {
-  height: 100%;
+  padding-top: 32px;
+
+  @include respond-to('large') {
+    height: 100%;
+    padding-top: 0;
+  }
+
 
   &__nav {
     width: 80%;

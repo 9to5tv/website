@@ -17,7 +17,7 @@ class LogoContainer extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll(e) {
+  handleScroll() {
     const getRatio = el => (el.getBoundingClientRect().top + el.offsetHeight) / (el.getBoundingClientRect().top + el.offsetHeight + window.scrollY);
 
     const title1 = getRatio(this.refs.title1);
@@ -38,12 +38,12 @@ class LogoContainer extends React.Component {
     const getOffset = value => {
       if (!value || value === Infinity) return 0;
       else return Math.pow(1 - value, 5) * this.refs.title1.offsetWidth/4;
-    } 
+    };
 
     return (
       <div className='logo-container' ref='parent'>
         <CameraFrame background={require('../../img/statue.png')} showZoom={false} tl={null} br={null}
-          bl={<span />} tr={<span />}>
+          bl={null} tr={null} bordered={true}>
           <a className='no-slash' href='https://9to5.tv'>
             <div ref='title1' className='camera-frame__title'>
               <div style={{ opacity: this.state.title1 }} className='camera-frame__title__original'>{title}</div>

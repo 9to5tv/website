@@ -4,36 +4,54 @@
   margin: auto;
   text-align: center;
   font-size: 1.5rem;
-  padding: 0 1.5em;
+  padding: 0 1.5em 32px;
 
   a {
-    color: black;
+    color: $blue;
+    display: block;
     margin: 0;
-
-    &:after {
-      margin: 0 1.2em;
-      content: ' // ';
-      color: black !important;
-    }
 
     &:before {
       content: none !important;
     }
 
-    &:last-child:after {
-      content: none;
+    &:after, &:first-child:before {
+      margin: 0 1.2em;
+      content: ' / ' !important;
+      color: black !important;
+      display: block;
     }
+
+    @include respond-to('large') {
+      display: inline-block;
+      color: black;
+
+      &:after, &:first-child:before {
+        display: inline;
+      }
+
+    }
+
 
     &:hover {
       color: $blue;
     }
   }
 
-  &__links .hidden-mobile {
-    display: none;
 
-    @include respond-to('medium') {
-      display: inline-block;
+  &__links--no-mobile {
+
+    a:before, a:after {
+      display: inline !important;
+    }
+
+    .hidden-mobile {
+      display: none;
+
+      @include respond-to('large') {
+        display: inline-block;
+      }
     }
   }
+
 }

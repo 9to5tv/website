@@ -4,6 +4,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const config = require('./env.config.js');
 
 module.exports = {
   devtool: '#cheap-module-eval-source-map',
@@ -62,7 +63,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('development')
+        'NODE_ENV': JSON.stringify('development'),
+        'TWITCH_CLIENT_ID': JSON.stringify(config.TWITCH_CLIENT_ID || 'NO ID')
       }
     }),
     new HtmlWebpackPlugin({

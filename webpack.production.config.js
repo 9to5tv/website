@@ -6,6 +6,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const config = require('./env.config.js');
 
 module.exports = {
   // devtool: '#inline-source-map',
@@ -68,7 +69,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('production'),
+        'TWITCH_CLIENT_ID': JSON.stringify(config.TWITCH_CLIENT_ID || 'NO ID')
       }
     }),
     new HtmlWebpackPlugin({

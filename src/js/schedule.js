@@ -361,14 +361,14 @@ export default {
 //           day: 'Thursday',
 //           time: '9:00'
 //         },
-//         {
-//           title: 'Points, Lines, Planes, and Blobs',
-//           artist: 'Bradley Bowers',
-//           type: types.WORKSHOP,
-//           description: '',
-//           day: 'Thursday',
-//           time: '12:00'
-//         },
+        {
+          title: 'Points, Lines, Planes, and Blobs',
+          artist: 'Bradley Bowers',
+          type: types.WORKSHOP,
+          description: '',
+          day: 'Thursday',
+          time: '12:00'
+        },
         {
           title: 'Bench Talk',
           artist: 'George Gomez and Gavin Bernard',
@@ -399,7 +399,7 @@ export default {
       date: '9/29/2017',
       events: [
         {
-          title: 'Stream Daddy\s',
+          title: 'Stream Daddies',
           artist: 'Allie & Dads',
           type: types.SHOW,
           description: '',
@@ -429,11 +429,23 @@ export default {
 //           time: '15:30'
 //         },
         {
-          title: 'No Eyes / Genko',
+          title: 'No Eyes / Ginko',
           artist: 'MAMMAL Gallery Concert',
           type: types.SHOW,
           description: '',
           time: '19:00'
+        }
+      ]
+    },
+    {
+      date: '9/30/2017',
+      events: [
+        {
+          title: 'Node-Body',
+          artist: 'Lisa Parra',
+          type: types.SHOW,
+          description: '',
+          time: '17:00'
         }
       ]
     },
@@ -549,13 +561,13 @@ export default {
       title: 'Basix',
       artist: 'Kevin Siwoff',
       artistUrl: 'kevinsiwoff.com',
-      description: 'the importance of ecommerce (Coming Sep. 18th)',
+      description: 'the importance of ecommerce',
     },
     {
       title: 'Supercruft',
       artist: 'Andrew Venell',
       artistUrl: 'andrewvenell.com',
-      description: 'abstract video mosh (Coming Sep 13th)',
+      description: 'abstract video mosh',
     },
     {
       title: 'Streetcat.Media',
@@ -567,7 +579,7 @@ export default {
       title: 'Holypager',
       artist: 'Brannon Dorsey ',
       artistUrl: 'brannondorsey.com',
-      description: 'pagers printing pages (Coming Sep. 18th)',
+      description: 'pagers printing pages',
     },
     {
       title: 'DRAWN',

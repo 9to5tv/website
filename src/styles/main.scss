@@ -10,6 +10,7 @@
 @import './components/navbar.scss';
 @import './components/live-container.scss';
 @import './components/logo-container.scss';
+@import './components/gallery-container.scss';
 @import './components/camera-frame.scss';
 // @import 'nav.scss';
 // @import 'modal.scss';
@@ -105,10 +106,6 @@ a {
     box-sizing: border-box;
     margin: 0;
     padding: $containerPadding * 2 + 60px $containerPadding;
-
-    &.last {
-      padding-bottom: 16 * $containerPadding;
-    }
 
     &.fixed {
       h2 {

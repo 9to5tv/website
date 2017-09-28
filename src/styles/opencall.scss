@@ -7,6 +7,10 @@
   &__cta {
     margin: 4rem 0;
 
+    > div {
+      line-height: 1.75em;
+    }
+
     &__row {
       display: flex;
       justify-content: space-between;

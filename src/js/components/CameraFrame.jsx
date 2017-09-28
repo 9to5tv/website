@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CameraFrame = ({ children, background, showZoom=true, tl=<Battery />, tr=<Live />, bl=<Timer />, br=<Bars /> }) => {
+const CameraFrame = ({ children, background, showZoom=true, bordered=false, tl=<Battery />, tr=<Live />, bl=<Timer />, br=<Bars /> }) => {
 
   const renderCorner = (corner, element) => (
     <div className={'camera-frame__corner camera-frame__corner--' + corner}>
@@ -12,7 +12,7 @@ const CameraFrame = ({ children, background, showZoom=true, tl=<Battery />, tr=<
 
   return (
     <div className='camera-frame-wrapper'>
-      <div className='camera-frame'>
+      <div className={'camera-frame' + (bordered ? ' camera-frame--bordered' : '')}>
         {showZoom ? <Zoom /> : null}
         {tl ? renderCorner('tl', tl) : null}
         {tr ? renderCorner('tr', tr) : null}

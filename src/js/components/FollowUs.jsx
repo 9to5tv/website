@@ -50,6 +50,17 @@ const FollowUs = () => (
         <span className='md'>R</span>
         <span className='md'>/</span>
       </a>
+      <a href='https://www.youtube.com/channel/UCvXz9DdNH-AyvGbxgtiHf4A' target='_blank' className='opencall__cta__row no-slash'>
+        <span className='md'>/</span>
+        <span className='md'>Y</span>
+        <span className='md'>O</span>
+        <span className='md'>U</span>
+        <span className='md'>T</span>
+        <span className='md'>U</span>
+        <span className='md'>B</span>
+        <span className='md'>E</span>
+        <span className='md'>/</span>
+      </a>
       <a className='opencall__cta__row no-slash'><br /></a>
       <div className='opencall__cta__row'>
         <span className='sm'>E</span>

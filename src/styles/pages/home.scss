@@ -2,11 +2,40 @@
 @import './home/team.scss';
 
 .home {
-  height: 100%;
+  padding-top: 32px;
+
+  @include respond-to('large') {
+    height: 100%;
+    padding-top: 0;
+  }
 
   &__nav {
     width: 80%;
     max-width: 1188px;
-    margin: auto;
+    margin: 32px auto;
+  }
+
+  &__section {
+    width: 80%;
+    max-width: 1188px;
+    margin: 0 auto 32px;
+    overflow-x: hidden;
+
+    &__title {
+      font-size: 1.5rem;
+      text-align: center;
+
+      > span {
+        text-align: left;
+      }
+
+      @include respond-to('medium') {
+        font-size: 2.5rem;
+      }
+    }
+
+    &__project {
+      border-bottom: 1px solid black;
+    }
   }
 }

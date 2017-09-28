@@ -26,29 +26,29 @@ const Partners = () => (
         <a href='http://www.mammalgallery.com/' className='digital' target='_blank'>MAMMAL Gallery</a> Atlanta&rsquo;s favorite ever-evolving carte blanche<br />
       </p>
 
-      <p className='blurb'>9to5 relies on supporters like you to keep the experiment going. We value all of our supporters, big or small, and would love to talk with you about how you can be a part of our platform. All donations are tax deductible, fund independent artists and technologists, and help facilitate groundbreaking innovation across all interests and industries. Reach out. We&rsquo;re ready to talk to you.</p>
 
-      <div className='partners__cta'>
-        <div className='partners__cta__row'>
-          <span className='md'>BECOME</span>
-          <span className='md'>a</span>
-          <span className='md'>PARTNER</span>
-        </div>
-        <a href='mailto:info@9to5.tv' className='partners__cta__row no-slash'>
-          <span className='lg'>/</span>
-          <span className='lg'>T</span>
-          <span className='lg'>O</span>
-          <span className='lg'>D</span>
-          <span className='lg'>A</span>
-          <span className='lg'>Y</span>
-          <span className='lg'>/</span>
-        </a>
-      </div>
-      <p className='partners__benefits'>Ad Placement Across Platforms</p>
-      <p className='partners__benefits'>501(c)(3) Deductible Donation</p>
-      <p className='partners__benefits'>Position with Progress</p>
     </div>
   </div>
 );
 
 export default Partners;
+// <p className='blurb'>9to5 relies on supporters like you to keep the experiment going. We value all of our supporters, big or small, and would love to talk with you about how you can be a part of our platform. All donations are tax deductible, fund independent artists and technologists, and help facilitate groundbreaking innovation across all interests and industries. Reach out. We&rsquo;re ready to talk to you.</p>
+// <div className='partners__cta'>
+//   <div className='partners__cta__row'>
+//     <span className='md'>BECOME</span>
+//     <span className='md'>a</span>
+//     <span className='md'>PARTNER</span>
+//   </div>
+//   <a href='mailto:info@9to5.tv' className='partners__cta__row no-slash'>
+//     <span className='lg'>/</span>
+//     <span className='lg'>T</span>
+//     <span className='lg'>O</span>
+//     <span className='lg'>D</span>
+//     <span className='lg'>A</span>
+//     <span className='lg'>Y</span>
+//     <span className='lg'>/</span>
+//   </a>
+// </div>
+// <p className='partners__benefits'>Ad Placement Across Platforms</p>
+// <p className='partners__benefits'>501(c)(3) Deductible Donation</p>
+// <p className='partners__benefits'>Position with Progress</p>

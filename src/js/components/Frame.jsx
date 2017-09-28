@@ -6,7 +6,7 @@ class Frame extends React.Component {
   render() {
     return (
       <div className='frame'>
-        <div className='frame__navbar'><Nav /></div>
+        <div className='frame__navbar'><Nav includeLogo={true} hideOnMobile={true} /></div>
         <div className='frame__content'>{this.props.children}</div>
       </div>
     );  

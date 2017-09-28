@@ -11,6 +11,7 @@ class About extends React.Component {
     return (
       <div className='about-page'>
         <LogoContainer title='Works in Progress' />
+        <div className='home__nav'><Nav includeLogo={true} /></div>
         <InfoBlock />
         <Team />
         <FollowUs />
