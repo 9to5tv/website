@@ -25,7 +25,7 @@ class ScheduleContainer extends React.Component {
       const minute = parseInt(times[2]);
       const minuteText = minute ? ':' + minute : ':00';
       let text;
-      if (hour <= 12) text = (hour < 10 ? '0' : '') + hour + minuteText + 'AM';
+      if (hour < 12) text = (hour < 10 ? '0' : '') + hour + minuteText + 'AM';
       else text = (hour - 12 < 10 ? '0' : '') + (hour - 12) + minuteText + 'PM';
       return (
         <div className='schedule-container__events__block__time'>

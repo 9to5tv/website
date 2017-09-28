@@ -445,7 +445,7 @@ export default {
           artist: 'Lisa Parra',
           type: types.SHOW,
           description: '',
-          time: '17:00'
+          time: '15:00'
         }
       ]
     },
