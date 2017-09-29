@@ -413,14 +413,6 @@ export default {
           description: '',
           time: '12:00'
         },
-        {
-          title: 'Musical Poetry Works in Progress',
-          artist: 'Adam Shavin',
-          type: types.SHOW,
-          description: '',
-          day: 'Friday',
-          time: '14:00'
-        },
 //         {
 //           title: 'Points, Lines, Planes, and Blobs',
 //           artist: 'Bradley Bowers',
@@ -452,6 +444,14 @@ export default {
     {
       date: '10/02/2017',
       events: [
+        {
+          title: 'Musical Poetry Works in Progress',
+          artist: 'Adam Shavin',
+          type: types.SHOW,
+          description: '',
+          day: 'Friday',
+          time: '14:00'
+        },
         {
           title: 'Us, Aggregated',
           artist: 'Mimi Onuoha',
