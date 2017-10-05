@@ -413,14 +413,6 @@ export default {
           description: '',
           time: '12:00'
         },
-        {
-          title: 'Musical Poetry Works in Progress',
-          artist: 'Adam Shavin',
-          type: types.SHOW,
-          description: '',
-          day: 'Friday',
-          time: '14:00'
-        },
 //         {
 //           title: 'Points, Lines, Planes, and Blobs',
 //           artist: 'Bradley Bowers',
@@ -442,7 +434,7 @@ export default {
       events: [
         {
           title: 'Node-Body',
-          artist: 'Lisa Parra',
+          artist: 'Lisa Parra, Olivia Jack, and Daniel Pinheiro',
           type: types.SHOW,
           description: '',
           time: '15:00'
@@ -452,6 +444,21 @@ export default {
     {
       date: '10/02/2017',
       events: [
+        {
+          title: 'Office Hours: Day 1 - Plants and Machines',
+          artist: 'Chris Collins',
+          type: types.SHOW,
+          description: '',
+          time: '13:00'
+        },
+        {
+          title: 'Musical Poetry Works in Progress',
+          artist: 'Adam Shavin',
+          type: types.SHOW,
+          description: '',
+          day: 'Friday',
+          time: '16:00'
+        },
         {
           title: 'Us, Aggregated',
           artist: 'Mimi Onuoha',
@@ -464,13 +471,6 @@ export default {
     {
       date: '10/03/2017',
       events: [
-        {
-          title: 'Shared AR Experiences',
-          artist: 'Andy Pruett',
-          type: types.SHOW,
-          description: '',
-          time: '9:00'
-        },
         {
           title: 'Crafty AF',
           artist: 'Very Sandwich',
@@ -486,11 +486,18 @@ export default {
           time: '11:00'
         },
         {
+          title: 'Office Hours: Day 2 - Work Friends',
+          artist: 'Chris Collins',
+          type: types.SHOW,
+          description: '',
+          time: '13:00'
+        },
+        {
           title: 'The Influencers Present',
           artist: 'Sean Fahie',
           type: types.SHOW,
           description: '',
-          time: '13:30'
+          time: '14:00'
         },
         {
           title: 'Busy Boys',
@@ -506,18 +513,24 @@ export default {
       date: '10/04/2017',
       events: [
         {
-          title: 'Dr. Tony\'s Mean Meme Machine',
-          artist: 'Tony Zaret',
+          title: 'Office Hours: Day 3 - Stress',
+          artist: 'Chris Collins',
           type: types.SHOW,
           description: '',
-          day: 'Wednesday',
-          time: '16:00'
+          time: '13:00'
         }
       ]
     },
     {
       date: '10/05/2017',
       events: [
+        {
+          title: 'Office Hours: Day 4 - Work/Life Balance',
+          artist: 'Chris Collins',
+          type: types.SHOW,
+          description: '',
+          time: '13:00'
+        },
         {
           title: 'Bench Talk',
           artist: 'George Gomez and Gavin Bernard',
@@ -545,13 +558,6 @@ export default {
           type: types.SHOW,
           description: '',
           time: '11:00'
-        },
-        {
-          title: 'Points, Lines, Planes, and Blobs',
-          artist: 'Bradley Bowers',
-          type: types.WORKSHOP,
-          description: '',
-          time: '15:30'
         }
       ]
     },
