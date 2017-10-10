@@ -3,7 +3,7 @@ import request from 'superagent';
 import Nav from '../../components/Nav';
 import LiveContainer from '../../components/LiveContainer';
 import LogoContainer from '../../components/LogoContainer';
-import GalleryContainer from '../../components/GalleryContainer';
+import ProjectFeatureContainer from '../../components/ProjectFeatureContainer';
 import FollowUs from '../../components/FollowUs';
 import Partners from './Partners';
 
@@ -29,11 +29,13 @@ class Home extends React.Component {
     return (
       <div className='home'>
         {this.state.live ? <LiveContainer /> : <LogoContainer />}
-        <div className='home__nav'><Nav /></div>
-        <GalleryContainer />
-        {/**<div className='home__section'>
+        <div className='home__section'>
           <h2 className='home__section__title'><span>FEATURED<br />/{'\u00A0'}PROJECTS</span></h2>
-        </div>**/}
+          <ProjectFeatureContainer title='A / B' artist='Harald Haraldsson' image={require('../../../img/artists/brannon-dorsey/cover.jpg')} />
+          <ProjectFeatureContainer title='Basix' artist='Kevin Siwoff' />
+          <ProjectFeatureContainer title='Holy Pager' artist='Brannon Dorsey' />
+          <ProjectFeatureContainer title='Concert Series' artist='Mammal Gallery' />
+        </div>
         <Partners />
         <FollowUs />
         <div className='home__nav'><Nav includeLogo={true} /></div>
