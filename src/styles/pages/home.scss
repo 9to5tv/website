@@ -18,11 +18,11 @@
   &__section {
     width: 80%;
     max-width: 1188px;
-    margin: 0 auto 64px;
+    margin: 0 auto 96px;
 
     &__title {
       max-width: $maxWidth;
-      margin: 0 auto;
+      margin: 0 auto 32px;
       font-size: 1.5rem;
       text-align: left;
 
@@ -44,7 +44,7 @@
     }
 
     &__project {
-      margin: 16px 0;
+      margin: 32px 0;
     }
   }
 }
