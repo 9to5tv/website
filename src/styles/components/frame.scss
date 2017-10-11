@@ -1,32 +1,30 @@
 .frame {
-  position: fixed;
-  top: $containerPadding;
-  left: $containerPadding;
-  right: $containerPadding;
-  bottom: $containerPadding;
+  position: relative;
   z-index: 100;
   pointer-events: none;
 
   &:before {
     content: '';
-    position: absolute;
+    position: fixed;
     z-index: 99;
-    top: -$containerPadding;
-    left: -$containerPadding;
-    right: -$containerPadding;
-    bottom: -$containerPadding;
-    border: $containerPadding solid white;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: 100;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    border: $containerPadding solid white;
+    border-bottom: none;
+  }
+
+  &:after {
+    content: '';
+    position: fixed;
+    z-index: 100;
+    top: $containerPadding;
+    left: $containerPadding;
+    right: $containerPadding;
+    bottom: $containerPadding;
     border: $borderWidth solid $blk;
+    border-bottom: none;
   }
 
   &__navbar {
@@ -40,7 +38,18 @@
     background-color: white;
   }
 
+  &__waveform{
+    position: fixed;
+    z-index: 101;
+    bottom: -$containerPadding;
+    left: $containerPadding;
+    right: $containerPadding;
+  }
+
   &__content {
     padding: $containerPadding + $borderWidth + 48px $containerPadding + $borderWidth $containerPadding + $borderWidth;
+    pointer-events: initial;
+    z-index: 98;
+    position: relative;
   }
 }

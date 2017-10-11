@@ -13,6 +13,7 @@
 @import './components/gallery-container.scss';
 @import './components/project-feature.scss';
 @import './components/camera-frame.scss';
+@import './components/waveform.scss';
 
 @import 'above-fold.scss';
 @import 'opencall.scss';
@@ -239,29 +240,7 @@ p {
     display: block;
   }
 }
-.fixed-bottom {
-  position: fixed;
-  z-index: 100;
-  bottom: -$containerPadding;
-  left: $containerPadding;
-  right: $containerPadding;
-}
-#waveform {
-  width: 100%;
-  height: $containerPadding * 4;
 
-  polyline {
-    stroke: black;
-    stroke-width: $borderWidth;
-    fill: none;
-  }
-
-  polygon {
-    fill: white;
-    stroke: none;
-  }
-
-}
 .slant-container {
   position: relative;
   z-index: 99;

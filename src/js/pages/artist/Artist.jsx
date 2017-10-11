@@ -1,16 +1,15 @@
 import React from 'react';
-import Nav from '../../components/Nav';
+import Frame from '../../components/Frame';
 import artists from '../../artists';
 
 class Artist extends React.Component {
 
   render() {
     const record = artists[this.props.match.params.id];
-    console.log(record);
 
     return (
+      <Frame>
       <div className='artist'>
-        <div className='artist__nav'><Nav /></div>
         <div className='artist__content'>
           <div className='artist__title'>{record.title}</div>
           <div className='artist__video' dangerouslySetInnerHTML={{ __html: record.embed }} />
@@ -21,6 +20,7 @@ class Artist extends React.Component {
           <div>{record.description.map(p => <p key={p}>{p}</p>)}</div>
         </div>
       </div>
+    </Frame>
     );
   }
 }

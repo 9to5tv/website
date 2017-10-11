@@ -20,7 +20,8 @@ class LogoContainer extends React.Component {
   }
 
   handleScroll() {
-    const getRatio = el => (el.getBoundingClientRect().top + el.offsetHeight) / (el.getBoundingClientRect().top + el.offsetHeight + window.scrollY);
+    const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const getRatio = el => (el.getBoundingClientRect().top + el.offsetHeight) / (el.getBoundingClientRect().top + el.offsetHeight + scrollTop);
 
     const title1 = getRatio(this.refs.title1);
     const title2 = getRatio(this.refs.title2);

@@ -1,0 +1,16 @@
+.waveform {
+  width: 100%;
+  height: $containerPadding * 4;
+
+  polyline {
+    stroke: black;
+    stroke-width: $borderWidth;
+    fill: none;
+  }
+
+  polygon {
+    fill: white;
+    stroke: none;
+  }
+
+}
