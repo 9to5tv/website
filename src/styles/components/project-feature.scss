@@ -1,10 +1,10 @@
 .project-feature {
   position: relative;
   width: 100%;
-  margin-bottom: -16%;
+  // margin-bottom: -16%;
 
   &:after {
-    padding-top: 63.75%;
+    // padding-top: 63.75%;
     display: block;
     content: '';
   }
@@ -18,5 +18,14 @@
     white-space: nowrap;
     color: black;
     font-size: 1.2rem;
+  }
+
+  .camera-frame-wrapper {
+
+    @include respond-to('large') {
+      &:after {
+        padding-top: 56.25%;
+      }
+    }
   }
 }

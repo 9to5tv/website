@@ -38,7 +38,6 @@ class Home extends React.Component {
         </div>
         <Partners />
         <FollowUs />
-        <div className='home__nav'><Nav includeLogo={true} /></div>
       </div>
     );
   }

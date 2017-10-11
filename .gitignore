@@ -1,3 +1,4 @@
 node_modules/
 dist/
 aws.json
+package-lock.json
