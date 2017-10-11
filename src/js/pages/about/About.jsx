@@ -10,8 +10,7 @@ class About extends React.Component {
   render() {
     return (
       <div className='about-page'>
-        <LogoContainer title='Works in Progress' />
-        <div className='home__nav'><Nav includeLogo={true} /></div>
+        <LogoContainer title='Works in Progress' background={require('../../../img/statue2.png')} />
         <InfoBlock />
         <Team />
         <FollowUs />

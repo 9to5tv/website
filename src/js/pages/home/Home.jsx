@@ -1,6 +1,6 @@
 import React from 'react';
 import request from 'superagent';
-import Nav from '../../components/Nav';
+import { Link } from 'react-router-dom';
 import LiveContainer from '../../components/LiveContainer';
 import LogoContainer from '../../components/LogoContainer';
 import ProjectFeatureContainer from '../../components/ProjectFeatureContainer';
@@ -36,6 +36,11 @@ class Home extends React.Component {
     return (
       <div className='home'>
         {this.state.live ? <LiveContainer /> : <LogoContainer />}
+        <div className='home__section'>
+          <div className='home__section__details'>
+            <span className='n9to5'>9to5</span> is a digital art exhibition that dissolves the boundary between artist and audience by way of an experimental livestream and emerging interfaces. <Link to='/about'>Learn More</Link>
+          </div>
+        </div>
         <div className='home__section'>
           <h2 className='home__section__title'><span>FEATURED<br />/{'\u00A0'}PROJECTS</span></h2>
           {featured.map(p => (

@@ -45,7 +45,8 @@ class LogoContainer extends React.Component {
 
     return (
       <div className='logo-container' ref='parent'>
-        <CameraFrame background={require('../../img/statue.png')} showZoom={false} tl={null} br={null}
+        <div className='logo-container__space' />
+        <CameraFrame background={this.props.background || require('../../img/statue.png')} showZoom={false} tl={null} br={null}
           bl={null} tr={null} bordered={true}>
           <Link className='no-slash' to='/'>
             <div ref='title1' className='camera-frame__title'>
@@ -65,6 +66,7 @@ class LogoContainer extends React.Component {
             </div>
           </Link>
         </CameraFrame>
+        <div className='logo-container__space' />
       </div>
     );
   }

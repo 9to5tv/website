@@ -90,10 +90,10 @@ const FollowUs = () => (
         <span className='md'>/</span>
       </a>
     </div>
-    <div dangerouslySetInnerHTML={{ __html: mailchimpHtml }} />
   </div>
 );
 
+// <div dangerouslySetInnerHTML={{ __html: mailchimpHtml }} />
 const mailchimpHtml = `
   <!-- Begin MailChimp Signup Form -->
   <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">

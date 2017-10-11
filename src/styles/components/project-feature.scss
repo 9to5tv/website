@@ -10,8 +10,13 @@
   }
 
   .camera-frame__statue img {
-    width: auto;
-    max-height: 100%;
+    height: auto;
+    max-width: 100%;
+
+    @include respond-to('large') {
+      height: 100%;
+      width: auto;
+    }
   }
 
   .camera-frame__corner .camera-frame__corner__content {
