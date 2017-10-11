@@ -6,6 +6,13 @@ import LogoContainer from '../../components/LogoContainer';
 import ProjectFeatureContainer from '../../components/ProjectFeatureContainer';
 import FollowUs from '../../components/FollowUs';
 import Partners from './Partners';
+import artists from '../../artists';
+
+const featured = [
+  artists['harald-haraldsson'],
+  artists['brannon-dorsey'],
+  artists['kevin-siwoff'],
+];
 
 class Home extends React.Component {
   constructor(props) {
@@ -31,10 +38,11 @@ class Home extends React.Component {
         {this.state.live ? <LiveContainer /> : <LogoContainer />}
         <div className='home__section'>
           <h2 className='home__section__title'><span>FEATURED<br />/{'\u00A0'}PROJECTS</span></h2>
-          <ProjectFeatureContainer title='A / B' artist='Harald Haraldsson' image={require('../../../img/artists/brannon-dorsey/cover.jpg')} />
-          <ProjectFeatureContainer title='Basix' artist='Kevin Siwoff' />
-          <ProjectFeatureContainer title='Holy Pager' artist='Brannon Dorsey' />
-          <ProjectFeatureContainer title='Concert Series' artist='Mammal Gallery' />
+          {featured.map(p => (
+            <div className='home__section__project' key={p.id}>
+              <ProjectFeatureContainer title={p.title} artist={p.name} image={p.cover} url={'/artists/' + p.id} />
+            </div>
+          ))}
         </div>
         <Partners />
         <FollowUs />

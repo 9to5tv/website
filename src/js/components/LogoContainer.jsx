@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import CameraFrame from './CameraFrame';
 
 class LogoContainer extends React.Component {
@@ -44,7 +46,7 @@ class LogoContainer extends React.Component {
       <div className='logo-container' ref='parent'>
         <CameraFrame background={require('../../img/statue.png')} showZoom={false} tl={null} br={null}
           bl={null} tr={null} bordered={true}>
-          <a className='no-slash' href='https://9to5.tv'>
+          <Link className='no-slash' to='/'>
             <div ref='title1' className='camera-frame__title'>
               <div style={{ opacity: this.state.title1 }} className='camera-frame__title__original'>{title}</div>
               <div style={{ left: getOffset(this.state.title1) }} className='camera-frame__title__copy camera-frame__title__copy--red'>{title}</div>
@@ -60,7 +62,7 @@ class LogoContainer extends React.Component {
               <div style={{ left: getOffset(this.state.title3) }} className='camera-frame__title__copy camera-frame__title__copy--red'>{title}</div>
               <div style={{ right: getOffset(this.state.title3) }} className='camera-frame__title__copy camera-frame__title__copy--blue'>{title}</div>
             </div>
-          </a>
+          </Link>
         </CameraFrame>
       </div>
     );
