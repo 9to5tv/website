@@ -14,7 +14,7 @@ class Waveform extends Component {
   reset(width, height) {
     this.counter = 0;
     this.width = width || findDOMNode(this).getBoundingClientRect().width;
-    this.height = height || findDOMNode(this).getBoundingClientRect().height / 4;
+    this.height = (height || findDOMNode(this).getBoundingClientRect().height) / 4;
   }
 
   draw() {
@@ -70,7 +70,7 @@ function move(amplitude, frequency, length, i, polygonal) {
     const amt = .15;
     if (x < width * amt) adjustment = Math.pow(x/(width * amt), 2);
     else if (x > width * (1-amt)) adjustment = Math.pow((width - x) / (width * amt), 2);
-    const y = yBase + (amplitude/2)*yOffset*adjustment;
+    const y = yBase + (amplitude/2)*yOffset*adjustment + 1;
     points.push([x, y].join(' '));
   }
   if (polygonal) {

@@ -30,7 +30,7 @@ class Frame extends React.Component {
         <div className='frame__navbar'></div>
         <div className='frame__content'>{this.props.children}</div>
         <div className='frame__waveform' ref='wf'>
-          <Waveform width={this.state.width} />
+          <Waveform width={this.state.width} height={64} />
         </div>
       </div>
     );  
